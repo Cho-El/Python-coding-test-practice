@@ -23,3 +23,6 @@ for i, name in enumerate(names):
 # insert(x,y) : x번 인덱스에 y를 삽입
 # copy.copy의 경우 얕은 복사로 메모리 주소만을 할당(단 string의 경우 값을 바꾸면 메모리 재할당이 일어난다. - immutable 객체)
 # copy.deepcopy b = copy.deepcopy(a) 내부의 모든 객체들을 새롭게 copy해주며, a와 b 두개는 서로 영향을 받지않는다.
+# list(combination(nums,3)) -> 조합 list로 뽑기
+
+#초기화 방법
