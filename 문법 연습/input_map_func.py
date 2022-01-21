@@ -1,10 +1,16 @@
 # # map함수를 이용한 input 여러개 받기
+# map(함수, 튜플 or 리스트와 같은 iterable한 자료형)
 a, b = map(int, input('숫자 두 개를 입력하세요: ').split(',')) # 입력받은 값을 콤마를 기준으로 분리
 print(a + b)
 n, m = map(int, input().split())
 print(n,m)
 a, b, c = map(int, input().split())
 print(a,b,c)
+
+# 튜플 삽입
+list = [a,b,c]
+t = tuple(list[i] for i in range(len(list)))
+print(t)
 
 # 2차원 배열 선언
 column, row = 3, 5

@@ -19,3 +19,29 @@ def solution(nums):
             answer += 1                     # return 값이 True이면 count(=answer) +1
 
     return answer
+
+"""소수 판별 함수2"""
+def combinations(nums):
+    result = []
+    for i in range(len(nums)-2):
+        for j in range(i+1,len(nums)-1):
+            for k in range(j+1,len(nums)):
+                temp = (nums[i],nums[j],nums[k])
+                result.append(temp)
+    return result
+def is_prime_number(num):
+    if num == 0 or num == 1:
+        return False
+    else:
+        for i in range(2, num//2+1):
+            if num%i == 0:
+                return False
+    return True
+def solution(nums):
+    answer = 0
+    cmb = combinations(nums)
+    for tup in cmb:
+        temp = sum(tup)
+        if is_prime_number(temp):
+            answer += 1
+    return answer
