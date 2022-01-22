@@ -1,3 +1,5 @@
+from itertools import combinations as comb
+
 nums = list(map(int, input("입력해주세요 : ").split()))
 r = int(input("조합할 갯수를 정해주세요 : "))
 print(nums)
@@ -14,7 +16,7 @@ def combinations1(nums):
 
 # print(combinations1(nums))
 
-def combination(arr, r):
+def combination2(arr, r):
     # 1.
     arr = sorted(arr)
     used = [0 for _ in range(len(arr))]
@@ -38,4 +40,22 @@ def combination(arr, r):
                 used[nxt] = 0
     generate([])
 
-print(combination(nums,3))
+# print(combination2(nums,3))
+
+def combinations3(arr, r):
+    result = []
+    if r == 0:
+        return [[]]
+    
+    for i in range(0, len(arr)):
+        elem = arr[i]
+        rest_arr = arr[i+1:]
+        print(f"rest_arr : {rest_arr}")
+        for C in combinations3(rest_arr,r-1):
+            result.append([elem]+C)
+            print(f"result : {result}")
+    print(f"result_2 : {result}")        
+    print("\n")
+    return result
+
+print(combinations3(nums,r))

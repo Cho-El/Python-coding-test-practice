@@ -21,3 +21,13 @@ s = start + 1 if A else 0
 print(s)
 s = start + 1 if B else 0
 print(s)
+
+# 전역 변수 쓰는 법
+counter = 0
+def f(n):
+	global counter # 전역 변수 선언
+	for i in range(1, n+1):
+		counter += 1
+	
+	return counter
+print(f(5))
