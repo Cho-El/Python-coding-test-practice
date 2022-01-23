@@ -33,3 +33,9 @@ l = ['a', 'b', 'c']
 ''.join(reversed(l))  # 'cba'
 
 #초기화 방법
+
+#수행 시간 측정 코드
+import time
+start = time.time()
+end = time.time()
+print("time : ", end - start)
