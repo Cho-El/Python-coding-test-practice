@@ -21,3 +21,10 @@ else:
     print(False)
 
 print(list(range(4)))
+
+key = str((1,2))
+print(key)
+
+a = [1,2,3,4,5]
+a[0], a[1] = a[1], a[0]
+print("a는 :", a)
