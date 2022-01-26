@@ -34,5 +34,8 @@ for i in range(1,0,-1):
 
 for i in range(0,2):
     print(i)
-    
+
 print(8//2)
+nums = [1,2,3,4,5]
+for i in range(len(nums)-1):
+    print("는",i)
