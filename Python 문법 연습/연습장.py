@@ -28,3 +28,11 @@ print(key)
 a = [1,2,3,4,5]
 a[0], a[1] = a[1], a[0]
 print("a는 :", a)
+
+for i in range(1,0,-1):
+    print("메롱")
+
+for i in range(0,2):
+    print(i)
+    
+print(8//2)
