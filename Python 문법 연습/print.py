@@ -34,3 +34,17 @@ print("1-1칸","1-2칸","1-3칸",end = "")
 print("2-1칸","2-2칸","2-3칸",sep = "")
 print("1-1칸","1-2칸","1-3칸",end = "**end 입니다** \n")
 print("2-1칸","2-2칸","2-3칸",sep = "**sep입니다**")
+
+# 리스트를 문자열로 합치기
+# 원본 리스트
+a = ['BlockDMask', 'python', 'join', 'example']
+print(a)
+print()
+ 
+# 리스트를 문자열로 합치기
+result1 = "_".join(a)
+print(result1)
+ 
+# 리스트를 문자열로 합치기
+result2 = ".".join(a)
+print(result2)

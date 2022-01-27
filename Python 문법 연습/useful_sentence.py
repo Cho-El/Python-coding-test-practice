@@ -31,3 +31,17 @@ def f(n):
 	
 	return counter
 print(f(5))
+
+# 리스트를 문자열로 합치기
+# 원본 리스트
+a = ['BlockDMask', 'python', 'join', 'example']
+print(a)
+print()
+ 
+# 리스트를 문자열로 합치기
+result1 = "_".join(a)
+print(result1)
+ 
+# 리스트를 문자열로 합치기
+result2 = ".".join(a)
+print(result2)
