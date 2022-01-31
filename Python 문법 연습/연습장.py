@@ -53,7 +53,8 @@ print(g[0][:3])
 print(g[0])
 g[1] = ['*', ' ', '*']
 g[0] = g[2] = ['*']*3
-
+for i in range(3):
+    print(g[i][:3])
 
 print(g)
 

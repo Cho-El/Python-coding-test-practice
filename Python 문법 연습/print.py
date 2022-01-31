@@ -48,3 +48,7 @@ print(result1)
 # 리스트를 문자열로 합치기
 result2 = ".".join(a)
 print(result2)
+
+a = ['***', '**', '*']
+L = []
+for i in a:
