@@ -45,3 +45,7 @@ print(result1)
 # 리스트를 문자열로 합치기
 result2 = ".".join(a)
 print(result2)
+
+#zip 함수
+for number, upper, lower in zip('12345','ABCDE','abcde') :
+	print(number, upper, lower)
