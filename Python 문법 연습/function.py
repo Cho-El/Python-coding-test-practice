@@ -39,3 +39,6 @@ import time
 start = time.time()
 end = time.time()
 print("time : ", end - start)
+
+# abs 함수 -절대값 함수
+a = abs(-22)
