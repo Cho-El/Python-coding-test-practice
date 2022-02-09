@@ -79,5 +79,8 @@ a = 5
 N /= a
 
 print(N)
-a = input("입력해주세요: ")
+
 print(a)
+print()
+for i in range(0,2):
+    print(i)

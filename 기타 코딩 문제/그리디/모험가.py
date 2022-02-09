@@ -10,4 +10,41 @@
 정보가 주어졌을 때, 여행을 떠날 수 있는 그룹 수의 최댓값을 구하는 프로그램을 작성하세요
 
 ex) N = 5, 공포도 : 2 3 1 2 2
+출력 : 2
 '''
+'''
+문제 전략
+가장 작은 공포도를 가진 사람부터 팀을 꾸린다.
+
+'''
+N = int(input("총원은? : "))
+scary_stat = list(map(int, input("공포도 : ").split()))
+def team(N, scary_stat):
+	team_num = 0
+	scary_stat.sort()
+	i = 0
+	# for i in range(N):
+	while(N>i):
+		current_size = scary_stat[i]# 그룹의 크기
+		start_index = i# 아직 그룹에 포함되지 않은 index
+		i += 1
+		while(True):
+			j = start_index # 시작 인덱스
+			cnt = 0
+			if j+current_size > N: # N의 크기보다 넘어갈경우
+				return team_num
+
+			for k in range(j,j+current_size): # 해당 사이즈의 그룹중에 현재 사이즈보다 큰 숫자가 있으면 current_size를 변경하고 다시 그룹화
+				if current_size < scary_stat[k]:
+					current_size = scary_stat[k]
+					cnt += 1
+					break
+
+			if cnt != 0: # 그룹내에 current_size보다 큰 값이 존재했음
+				continue
+			else:
+				temp = k
+				team_num += 1
+				break
+
+

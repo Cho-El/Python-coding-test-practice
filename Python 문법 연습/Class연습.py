@@ -21,3 +21,8 @@ for i in Counter(3):
 N,K = map(int, input("N과 K를 입력해주세요 : ").split())
 print(N)
 print(K)
+
+for i in range(3):
+	print(i)
+
+print(i)
