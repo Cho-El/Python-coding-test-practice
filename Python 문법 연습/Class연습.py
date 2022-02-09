@@ -17,3 +17,7 @@ class Counter:
 for i in Counter(3):
     print(i, end=' ')
     print("끝")
+
+N,K = map(int, input("N과 K를 입력해주세요 : ").split())
+print(N)
+print(K)

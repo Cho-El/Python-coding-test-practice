@@ -72,3 +72,12 @@ a = []
 a.append('L')
 a.append('R')
 print(a)
+
+N = 17
+a = 5
+
+N /= a
+
+print(N)
+a = input("입력해주세요: ")
+print(a)
