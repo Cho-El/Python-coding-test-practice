@@ -27,7 +27,6 @@ def team(N, scary_stat):
 	while(N>i):
 		current_size = scary_stat[i]# 그룹의 크기
 		start_index = i# 아직 그룹에 포함되지 않은 index
-		i += 1
 		while(True):
 			j = start_index # 시작 인덱스
 			cnt = 0
@@ -42,9 +41,23 @@ def team(N, scary_stat):
 
 			if cnt != 0: # 그룹내에 current_size보다 큰 값이 존재했음
 				continue
-			else:
-				temp = k
+			else: # 그룹형성
 				team_num += 1
+				i = k+1
 				break
+	return team_num
 
+def team2(N, scary_stat):
+	scary_stat.sort()
 
+	team_num = 0
+	cnt = 0
+	for i in scary_stat:
+		cnt += 1
+		if cnt >= i:
+			team_num += 1
+			cnt = 0
+	return team_num
+
+print(team(N,scary_stat))
+print(team2(N,scary_stat))

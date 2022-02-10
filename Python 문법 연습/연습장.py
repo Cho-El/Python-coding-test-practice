@@ -84,3 +84,21 @@ print(a)
 print()
 for i in range(0,2):
     print(i)
+
+# plan = list(map(str, input("계획서를 입력해주세요").split()))
+# print(plan)
+
+li = [[0]*3 for _ in range(5)]
+print(li)
+
+for i in li:
+    for j in i:
+        print()
+
+cnt_second = 0
+for i in range(59):
+	for j in str(i):
+		if j == '3':
+			cnt_second += 1
+			break
+print(cnt_second)

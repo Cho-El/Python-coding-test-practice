@@ -49,3 +49,9 @@ print(result2)
 #zip 함수
 for number, upper, lower in zip('12345','ABCDE','abcde') :
 	print(number, upper, lower)
+
+#swap
+a = 1
+b = 2
+a, b = b, a
+print('swap :',a,b)
