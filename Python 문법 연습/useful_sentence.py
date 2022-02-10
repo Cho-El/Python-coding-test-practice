@@ -54,3 +54,8 @@ for number, upper, lower in zip('12345','ABCDE','abcde') :
 a, b = 1, 2
 a, b = b, a
 print("swap : ", a,b)
+
+# 아스키 코드 값을 이용한 'a'로 얼마나 떨어져 있는지 구하는 법
+data = 'b'
+col = int(ord(data[0])) - int(ord('a')) # 아스키코드
+print(col)

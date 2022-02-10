@@ -107,3 +107,16 @@ for i in range(10,20):
     for j in range(20,25):
         print(str(i)+str(j), end = ' ')
     print()
+
+t = 'b'
+
+if t>'a' or t<'z':
+    print(t)
+
+data = 'bd'
+col = int(ord(data[0])) - int(ord('a')) + 1 # 아스키코드
+print(col)
+
+data = ['B','G','A','E','C']
+data.sort()
+print(data)

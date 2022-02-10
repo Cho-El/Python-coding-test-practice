@@ -60,3 +60,7 @@ def count_time1(N):
 	return cnt
 
 print(count_time1(N))
+
+'''
+자리 수를 10으로 나눈 몫 또는 나머지를 이용하여 구할 수도 있다.
+'''
