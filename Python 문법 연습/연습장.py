@@ -102,3 +102,8 @@ for i in range(59):
 			cnt_second += 1
 			break
 print(cnt_second)
+
+for i in range(10,20):
+    for j in range(20,25):
+        print(str(i)+str(j), end = ' ')
+    print()

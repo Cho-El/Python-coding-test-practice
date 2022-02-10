@@ -37,7 +37,7 @@ print(f(5))
 a = ['BlockDMask', 'python', 'join', 'example']
 print(a)
 print()
- 
+
 # 리스트를 문자열로 합치기
 result1 = "_".join(a)
 print(result1)
@@ -51,7 +51,6 @@ for number, upper, lower in zip('12345','ABCDE','abcde') :
 	print(number, upper, lower)
 
 #swap
-a = 1
-b = 2
+a, b = 1, 2
 a, b = b, a
-print('swap :',a,b)
+print("swap : ", a,b)
