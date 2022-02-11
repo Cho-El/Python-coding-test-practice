@@ -59,6 +59,7 @@ def append_star(n):
     for S in stars:
         L.append(S*3)
     return L
+    
 a = append_star(N)
 print(a)
 for i in range(N):

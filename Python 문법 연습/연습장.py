@@ -120,3 +120,13 @@ print(col)
 data = ['B','G','A','E','C']
 data.sort()
 print(data)
+
+list1 = [1,2,3,4,5]
+list2 = [6,7,8,9,10]
+num = 1
+# 같은 인덱스끼리 더하여 list로 반환하기
+result = map(lambda a, b: a+b, list1, list2)
+print(list1 + list2)
+print(list(result))
+t = 'ab'+'c'
+print(t)

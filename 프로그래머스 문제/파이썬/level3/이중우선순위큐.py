@@ -7,6 +7,7 @@ def changeHeap(heap):
         heapq.heappush(h, -num)
     return h
 
+
 def solution(operations):
     answer = []  # [최댓값, 최솟값]
     minheap = []
