@@ -1,3 +1,4 @@
+
 a=[1,2,3]
 start = 1 if a else 0
 print(start)
@@ -130,3 +131,14 @@ print(list1 + list2)
 print(list(result))
 t = 'ab'+'c'
 print(t)
+
+from collections import deque
+
+start = 1
+queue = deque()
+queue.append(1)
+print(queue)
+queue.append(2)
+print(queue)
+print(queue)
+print(queue.popleft())

@@ -29,7 +29,7 @@ print(stack) # 최하단 원소부터 출력
 from collections import deque
 
 queue = deque() # 단순히 list로 구현 가능하지만 시간복잡도 면에서 deque를 사용하자.
-
+# deque() -> 초기화는 list형태로 초기화할 수 있다. deque([1,2,3,4,5])
 queue.append(5) # list append와 같다. 시간복잡도 O(1)
 queue.append(2)
 queue.append(3)
@@ -88,3 +88,67 @@ DFS는 스택 자료구조(혹은 재귀 함수)를 이용하며, 구체적인 �
 3. 더 이상 2번의 과정을 수행할 수 없을 떄까지 반복한다.
 
 '''
+
+graph = [
+	[],
+	[2,3,8],
+	[1,7],
+	[1,4,5],
+	[3,5],
+	[3,4],
+	[7],
+	[2,6,8],
+	[1,7]
+]
+visited = [False]*9
+
+def dfs(graph, v, visited):
+	visited[v] = True
+	print(v, end = ' ')
+	# 현재 노드와 연결된 다른 노드를 재귀적으로 방문
+	for i in graph[v]:
+		if not visited[i]:
+			dfs(graph, i, visited)
+
+dfs(graph,1,visited)
+print()
+
+# BFS(Breadth-First-Search) - 너비 우선 탐색----------------------------------------------------
+'''
+BFS는 너비 우선 탐색이라고도 부르며, 그래프에서 가까운 노드부터
+우선적으로 탐색하는 알고리즘이다.
+- BFS는 큐 자료구조를 이용하며, 구체적인 동작 과정은 다음과 같다.
+1. 탐색 시작 노드를 큐에 삽입하고 방문 처리를 한다.
+2. 큐에서 노드를 꺼낸 뒤에 해당 노드의 인접 노드 중에서 방문하지 않은 노드를 모두
+큐에 삽입하고 방문 처리한다.
+3. 더 이상 2번의 과정을 수행할 수 없을 때까지 반복한다.
+'''
+
+graph = [
+	[],
+	[2,3,8],
+	[1,7],
+	[1,4,5],
+	[3,5],
+	[3,4],
+	[7],
+	[2,6,8],
+	[1,7]
+]
+visited = [False]*9
+
+def bfs(graph,start,visited):
+	queue = deque([start])
+	visited[start] = True
+	
+	while queue:
+		# 큐에서 하나의 원소를 뽑아 출력
+		v = queue.popleft()
+		print(v, end = ' ')
+		# 아직 방문하지 않은 인접한 원소들을 큐에 삽입
+		for i in graph[v]:
+			if not visited[i]:
+				queue.append(i)
+				visited[i] = True
+
+bfs(graph, 1, visited)
