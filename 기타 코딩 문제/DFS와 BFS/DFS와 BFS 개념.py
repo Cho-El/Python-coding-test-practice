@@ -137,7 +137,7 @@ graph = [
 ]
 visited = [False]*9
 
-def bfs(graph,start,visited):
+def bfs(start,visited):
 	queue = deque([start])
 	visited[start] = True
 	
@@ -151,4 +151,4 @@ def bfs(graph,start,visited):
 				queue.append(i)
 				visited[i] = True
 
-bfs(graph, 1, visited)
+bfs(1, visited)

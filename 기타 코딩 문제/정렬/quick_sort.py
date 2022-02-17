@@ -13,7 +13,7 @@ def quick_sort(nums, start, end): # start와 end는 인덱스 값
             right -= 1 
         if left >= right : # 엇갈리면 피벗의 값과 교체
             nums[right], nums[pivot] = nums[pivot], nums[right]
-        else : # 엇갈리지 않고, left와 right이 정해지면 두 값으 ㄹ교체
+        else : # 엇갈리지 않고, left와 right이 정해지면 두 값을 교체
             nums[left], nums[right] = nums[right], nums[left]
     quick_sort(nums, start, right-1)
     quick_sort(nums, right+1, end)
@@ -38,3 +38,30 @@ def quick_sort2(nums):
     return quick_sort2(left_side) + [pivot] + quick_sort2(right_side)
 
 print(quick_sort2(nums))
+
+nums = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+def quick_sort3(nums,start,end):
+    if len(nums) <= 1:
+        return
+    pivot = nums[0]
+    while start >= end:
+        for i in range(start, len(nums)):
+            if pivot <= nums[i]: # 왼쪽에서 오른쪽으로는 큰값
+                left_index = i
+                break
+        for i in range(end, 1, -1): # 오른쪽에서 왼쪽으로는 작은 값
+            if pivot >= nums[i]:
+                right_index = i
+                break
+        if right_index < left_index:
+            nums[right_index], nums[0] = nums[0], nums[right_index]
+            quick_sort3(nums,0,right_index)
+            quick_sort3(nums,right_index+1,right_index)
+
+        else:
+            nums[right_index],nums[left_index] = nums[left_index], nums[right_index]
+            start += 1
+            end -= 1
+        
+        
+    

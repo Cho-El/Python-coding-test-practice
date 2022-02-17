@@ -20,15 +20,14 @@ ex)
 출력 3
 
 '''
+import copy
 N, M = map(int,input("크기는 ?").split())
 # 2차원 리스트의 맵 정보 입력 받기
 graph = []
 for i in range(N):
 	graph.append(list(map(int, input())))
+graph2 = copy.deepcopy(graph)
 
-print(graph)
-# for i in graph:
-# 	print(i)
 def dfs(x, y,n,m):
 	if x <= -1 or x >= n or y <= -1 or y >= m :
 		return False
@@ -51,3 +50,39 @@ def ice_cream(N,M):
 	return result
 
 print(ice_cream(N,M))
+
+# print(graph2)
+from collections import deque
+def bfs(x, y,n,m):
+	if graph2[x][y] == 1:
+		return False
+	queue = deque([[x,y]])
+	
+	while queue :
+		v = queue.popleft()
+		x, y = v[0], v[1]
+
+		if x <= -1 or x >= n or y <= -1 or y >= m :
+			continue 
+		if graph2[x][y] == 1:
+			continue
+
+		if graph2[x][y] == 0:
+			graph2[x][y] = 1
+			queue.append([x-1,y])
+			queue.append([x,y-1])
+			queue.append([x+1,y])
+			queue.append([x,y+1])
+
+	return True
+
+def ice_cream_bfs(N,M):
+	result = 0
+	for i in range(N):
+		for j in range(M):
+			if bfs(i,j,N,M) == True:
+				result += 1
+	
+	return result
+
+print(ice_cream_bfs(N,M))

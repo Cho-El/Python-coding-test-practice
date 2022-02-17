@@ -135,10 +135,36 @@ print(t)
 from collections import deque
 
 start = 1
-queue = deque()
+queue = deque([(1,2)])
 queue.append(1)
 print(queue)
+print(queue.popleft())
 queue.append(2)
 print(queue)
 print(queue)
 print(queue.popleft())
+print()
+
+'''
+a =[1,2,3,4,5]
+for i in range(len(a)):
+    if a[i+6]==1 or a[i] == 1 or a[i] == 2 or a[i] == 3: # if문의 왼쪽부터 차근 차근 검사함
+        print(a[i])
+    else:
+        print("not",a[i])
+'''
+'''
+n,m = input().split()
+print(n,m)
+n,m = int(input().split())
+print(n,m)
+'''
+
+a = [1,2,3,4,5,6,7]
+
+t = [x for x in a if x >=3]
+print(t)
+
+a,target = list(map(int, input().split()))
+
+print(target)
