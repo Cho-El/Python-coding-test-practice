@@ -165,6 +165,10 @@ a = [1,2,3,4,5,6,7]
 t = [x for x in a if x >=3]
 print(t)
 
-a,target = list(map(int, input().split()))
+# a,target = list(map(int, input().split()))
 
-print(target)
+# print(target)
+
+
+for i in range(4,-1,-1):
+    print(i)

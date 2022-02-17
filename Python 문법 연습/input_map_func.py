@@ -26,3 +26,9 @@ num = [1,2,3,4,5]
 # 배열 초기화 방법
 a = [0] * len(num)
 a = [0 for _ in range(len(num))]
+
+#그래프 입력받기
+N = 10
+graph = []
+for i in range(N):
+	graph.append(list(map(int,input())))
