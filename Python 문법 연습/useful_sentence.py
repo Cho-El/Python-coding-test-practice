@@ -41,7 +41,7 @@ print()
 # 리스트를 문자열로 합치기------------------------------------------------
 result1 = "_".join(a)
 print(result1)
- 
+
 # 리스트를 문자열로 합치기------------------------------------------------
 result2 = ".".join(a)
 print(result2)
@@ -107,3 +107,39 @@ print('\n4. 딕셔너리 정렬 : sorted(d.items(), key=lambda x: x[1], reverse=
 h = sorted(d.items(), key=lambda x: x[1], reverse=True)
 print(h)
 
+# bisect 사용
+from bisect import bisect_left, bisect_right
+
+a = [10,11,12,13,14]
+
+def index(a, x): # 인덱스
+    i = bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
+    raise ValueError
+
+def find_lt(a, x): # x값보다 전에 있는 값중에 가장 오른쪽에 있는 값 찾기
+    i = bisect_left(a, x)
+    if i:
+        return a[i-1]
+    raise ValueError
+
+def find_le(a, x): # x값보다 전에 있는 값중에 가장 오른쪽에 있는 값 또는 같은 값 찾기
+    i = bisect_right(a, x)
+    if i:
+        return a[i-1]
+    raise ValueError
+
+def find_gt(a, x):
+    i = bisect_right(a, x)
+    if i != len(a):
+        return a[i]
+    raise ValueError
+
+def find_ge(a, x):
+    i = bisect_left(a, x)
+    if i != len(a):
+        return a[i]
+    raise ValueError
+
+print(find_lt(a,18))

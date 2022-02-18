@@ -44,5 +44,7 @@ def count_x2(N,M):
     l = bisect_left(array, M)
     r = bisect_right(array,M)
     return r-l
+
+
 print(count_x(N,M))
 print(count_x2(N,M))
