@@ -24,3 +24,14 @@ a2 = 3
 a3 = 8
 
 '''
+n = int(input("입력해주세요"))
+array = list(map(int, input().split()))
+d = [0]*100
+def Ant(n):
+    d[0] = array[0]
+    d[1] = max(array[0],array[1])
+    for i in range(2, n):
+        d[i] = max(d[i-1], d[i-2]+array[i])
+    print(d[n-1])
+
+Ant(n)
