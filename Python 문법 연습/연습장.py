@@ -172,3 +172,8 @@ print(t)
 
 for i in range(4,-1,-1):
     print(i)
+
+n = 5
+#3. 문자열 여러줄 입력받기 
+# s_list = [input() for _ in range(n)] #예시로 n에 3넣어 3줄 입력받기(엔터로 구분)
+
