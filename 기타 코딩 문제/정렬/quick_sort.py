@@ -1,3 +1,12 @@
+'''
+기준 데이터를 설정하고 그 기준보다 큰 데이터와 작은 데이터의 위치를 바꾸는 방법입니다.
+일반적인 상황에서 가장 많이 사용되는 정렬 알고리즘 중 하나입니다.
+병합 정렬과 더불어 대부분의 프로그래밍 언어의 정렬 라이브러리의 근간이 되는 알고리즘입니다.
+가장 기본적인 퀵 정렬은 첫 번째 데이터를 기준 데이터(pivot)로 설정합니다.
+
+이상적인 경우 분할이 절반씩 일어난다면 전체 연산횟수로 O(NlogN)를 기대할 수 있습니다.
+'''
+
 # nums = list(map(int,input("정렬할 숫자들을 입력해주세요 : ").split(' ')))
 nums = [1,10,5,8,7,6,4,3,2,9]
 def quick_sort(nums, start, end): # start와 end는 인덱스 값
@@ -6,10 +15,10 @@ def quick_sort(nums, start, end): # start와 end는 인덱스 값
     pivot = start
     left = start + 1
     right = end
-    while(left < right): # 엇갈릴 때 까지 반복
-        while(nums[left]<= nums[pivot] and left < end): 
+    while(left <= right): # 엇갈릴 때 까지 반복
+        while(nums[left]<= nums[pivot] and left < end): # 피벗보다 큰 데이터를 찾을 때까지 반복
             left += 1
-        while(nums[right]>=nums[pivot] and right > pivot):
+        while(nums[right]>=nums[pivot] and right > pivot): # 피벗보다 작은 데이터를 찾을 때까지 반복
             right -= 1 
         if left >= right : # 엇갈리면 피벗의 값과 교체
             nums[right], nums[pivot] = nums[pivot], nums[right]

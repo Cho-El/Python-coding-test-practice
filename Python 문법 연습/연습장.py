@@ -188,3 +188,18 @@ print(dp)
 result = max([dp[i][2] for i in range(4)])
 
 print(result)
+
+board = [[0] * 4] * 4
+for i in range(4):
+  print(board[i])
+
+board[0][0] = 1
+for i in range(4):
+  print(board[i])
+
+board = [[0] * 4 for _ in range(4)]
+board[1][2] = 1
+for i in range(4):
+  print(board[i])
+
+nums = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]

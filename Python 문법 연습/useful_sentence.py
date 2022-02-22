@@ -143,3 +143,13 @@ def find_ge(a, x):
     raise ValueError
 
 print(find_lt(a,18))
+
+# 한 줄로 입력받은 리스트를  n X m으로 나눌 때
+array = list(map(int,input().split()))
+n = 4
+m = 5
+array2 = []
+index = 0
+for i in range(n):
+	array2.append(array[index:index+m])
+	index += m

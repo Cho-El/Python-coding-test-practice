@@ -2,10 +2,11 @@
 # map(함수, 튜플 or 리스트와 같은 iterable한 자료형)
 # a, b = map(int, input('숫자 두 개를 입력하세요: ').split(',')) # 입력받은 값을 콤마를 기준으로 분리
 # print(a + b)
-# n, m = map(int, input().split())
+n, m = map(int, input().split())
 # print(n,m)
-# a, b, c = map(int, input().split())
-# print(a,b,c)
+a, b, c = map(int, input().split())
+print(a,b,c)
+
 
 # # 튜플 삽입
 # list = [a,b,c]
