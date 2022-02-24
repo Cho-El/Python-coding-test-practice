@@ -203,3 +203,9 @@ for i in range(4):
   print(board[i])
 
 nums = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+
+
+abc = False
+
+if not abc:
+    print("ㅇㅇ")
