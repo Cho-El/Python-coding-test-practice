@@ -29,10 +29,10 @@ for i in range(N):
 graph2 = copy.deepcopy(graph)
 
 def dfs(x, y,n,m):
-	if x <= -1 or x >= n or y <= -1 or y >= m :
+	if x <= -1 or x >= n or y <= -1 or y >= m : # n,m을 벗어난 값
 		return False
 
-	if graph[x][y] == 0:
+	if graph[x][y] == 0: # 방문안했다면
 		graph[x][y] = 1
 		dfs(x-1,y,n,m)
 		dfs(x,y-1,n,m)

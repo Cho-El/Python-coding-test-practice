@@ -124,7 +124,7 @@ distance = [INF] * (n + 1)
 def dijkstra_heap(start):
     q = []
     # 시작 노드로 가기 위한 최단 경로는 0으로 설정하여, 큐에 삽입
-    heapq.heappush(q, (0, start))
+    heapq.heappush(q, (0, start)) # (리스트, (우선순위, 값))
     distance[start] = 0
     while q: # 큐가 비어있지 않다면
         # 가장 최단거리가 짧은 노드에 대한 정보 꺼내기

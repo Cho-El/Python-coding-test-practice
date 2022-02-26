@@ -4,7 +4,7 @@ def solution(s):
     
     #2 영단어로 표시된 문자열이 있다면 숫자(인덱스 번호)로 교체 
 	for num, word in wordList :
-		s = s.replace(word, str(num)) 
+		s = s.replace(word, str(num))
     
 	#3 정수형으로 return 
 	answer = int(s)

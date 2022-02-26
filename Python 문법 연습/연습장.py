@@ -209,3 +209,44 @@ abc = False
 
 if not abc:
     print("ㅇㅇ")
+
+a = 3
+b = 1
+
+def practice(n):
+    global w # w는 전역변수로 함수 실행이 끝나도 없어지지 않는다.
+    result = a + b + n
+    print(result)
+
+practice(5)
+
+graph=[1]
+for i in graph:
+    print("1")
+        
+a = [1,2,3]
+c,d,e = a
+print(c,d,e)
+
+persons = [[1,2,3,4,5],[2,1,2,3,2,4,2,5],[3,3,1,1,2,2,4,4,5,5]]
+for i in persons:
+    print(persons.index(i))
+
+wordList = enumerate(["zero","one","two","three","four","five","six","seven","eight","nine"]) 
+print(wordList)
+
+# set 연산자 활용
+a = [1,2,3,4,5,5]
+b = [3,4,5,5,6,7,8]
+print(set(a))
+print(set(b))
+print(set(a)&set(b))
+print(set(a)|set(b))
+print(set(a)-set(b))
+print(set(a)^set(b))
+
+a = 'anfei2gn3'
+print(a.find('feig'))
+
+text = "dog.jpeg"
+print(text.strip("j.peg"))

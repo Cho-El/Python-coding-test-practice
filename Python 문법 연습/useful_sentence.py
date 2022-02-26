@@ -145,11 +145,27 @@ def find_ge(a, x):
 print(find_lt(a,18))
 
 # 한 줄로 입력받은 리스트를  n X m으로 나눌 때
-array = list(map(int,input().split()))
-n = 4
-m = 5
-array2 = []
-index = 0
-for i in range(n):
-	array2.append(array[index:index+m])
-	index += m
+# array = list(map(int,input().split()))
+# n = 4
+# m = 5
+# array2 = []
+# index = 0
+# for i in range(n):
+# 	array2.append(array[index:index+m])
+# 	index += m
+
+# set 연산자 활용
+a = [1,2,3,4,5,5]
+b = [3,4,5,5,6,7,8]
+print(set(a))
+print(set(b))
+print(set(a)&set(b)) # 교집합
+print(set(a)|set(b)) # 합집합
+print(set(a)-set(b)) # 차집합
+print(set(a)^set(b)) # 대칭차집합]
+
+# Counter
+from collections import Counter
+letters = 'bbibbi'
+c = Counter(letters)
+print(c)
