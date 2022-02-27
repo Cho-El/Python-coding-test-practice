@@ -1,8 +1,3 @@
-def distance(n,a,b):
-    right = abs(a-b)
-    left = abs(n+a-b)
-    return min(right, left)
-
 def solution(name):
     default = 'A' * len(name)
     result = 0 # 총 조작 횟수
@@ -51,13 +46,3 @@ def solution(name):
 
 name = "AAAB"
 print(solution(name))
-
-def solution(name):
-    change = [min(ord(i) - ord('A'), ord('Z') - ord(i) + 1) for i in name]
-    idx = 0
-    answer = 0
-
-    while True:
-        answer + change[idx]
-        change[idx] = 0
-
