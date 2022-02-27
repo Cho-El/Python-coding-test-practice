@@ -250,3 +250,59 @@ print(a.find('feig'))
 
 text = "dog.jpeg"
 print(text.strip("j.peg"))
+
+token = "{\"[]}"
+for removeChar in token:
+    print(removeChar)
+
+a= 3
+if 2<= a <= 5:
+    print("메")
+
+new_id = 'ABCDEF'
+for id in new_id:
+    if 'A'<= id <= 'Z':
+        id1 = chr(ord(id) - (ord('A') - ord('a')))
+        new_id = new_id.replace(id, id1)
+print(new_id)
+
+new_id = 'ABCDEF'
+new_id = new_id.lower()
+print(new_id)
+
+temp = 'hello, What are doing'
+print(temp.split())
+
+temp = '..fjeijfiege.1.'
+temp = temp.strip('.')
+print(temp[-1])
+print(temp + 'a')
+
+answer = '.'
+if answer[0] == '.':
+    answer = answer[1:] if len(answer) > 1 else '.'
+if answer[-1] == '.':
+    answer = answer[:-1]
+
+print(answer)
+
+a, b = set([1,2,3]), set([4,5,6])
+print(a,b)
+
+board = [[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]]
+print(len(board))
+
+stack = []
+stack.append(5)
+stack.append(2)
+stack.append(3)
+stack.append(7)
+stack.pop(-1)
+stack.append(1)
+stack.append(4)
+stack.pop()
+print(stack)
+
+name = 'abekfei'
+default = 'A' * len(name)
+print(default)
