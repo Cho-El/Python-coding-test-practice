@@ -306,3 +306,67 @@ print(stack)
 name = 'abekfei'
 default = 'A' * len(name)
 print(default)
+
+i = []
+print(sum(i))
+
+from collections import deque
+begin = 'abcd'
+target = 'aghd'
+q = deque()
+    # begin과 타겟값의 다른 부분의 index 저장
+for idx, (b,t) in enumerate(zip(begin, target)):
+    if b != t:
+        q.append(idx)
+
+print(q)
+
+a= [1,2]
+c,d = a
+print(c,d)
+
+from collections import defaultdict
+graph = defaultdict(list)
+tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"], ["JFK","ABC"]]
+
+for a,b in tickets:
+    graph[a].append(b)
+    graph[b]
+
+print(graph)
+print(graph['JFK'])
+print(graph["IAD"])
+print(graph)
+graph['ICN'].append(False)
+print(graph)
+print(graph['ICN'][-1])
+
+graph = defaultdict(list)
+for a,b in tickets:
+    graph[a].append(b)
+    graph[b] # key가 목적지인 값 생성
+for key in graph: # 방문 표시
+    graph[key].append(False)
+
+tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"], ["JFK","ABC"]]
+for i,(s,e) in enumerate(tickets):
+    print(i,s,e)
+
+tickets = [["ABC","AAG"], ["ABC","ADG"]]
+print(tickets)
+
+if tickets[0] > tickets[1]:
+    print("왼쪽이 더크다.")
+else:
+    print("왼쪽이 더작다")
+
+def abc():
+    return
+
+g = abc()
+print(g)
+
+if not g:
+    print("안빔")
+else:
+    print("빔")
