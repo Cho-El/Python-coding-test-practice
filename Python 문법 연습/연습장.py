@@ -370,3 +370,20 @@ if not g:
     print("안빔")
 else:
     print("빔")
+
+print()
+tickets = [["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"], ["JFK","ABC"]]
+routes = dict()
+
+for (start, end) in tickets:
+    print(routes.get(start))
+    routes[start] = routes.get(start, []) + [end]  
+
+print(routes)
+routes['ICN'].insert(1,'DEF')
+print(routes)
+
+start = 1
+from collections import deque
+q = deque(start)
+print(q)

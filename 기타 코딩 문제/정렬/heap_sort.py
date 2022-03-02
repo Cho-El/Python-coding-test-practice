@@ -31,7 +31,7 @@ def heap_sort(unsorted):
     # // 연산자 : 몫 구하기
     # 이진트리를 구하기 때문에 전체 크기의 반만 반복
     # for문을 거꾸로 돌아감
-    # 이진트리의 가장 아래서부터 heapifyt를 실행하여 힙 구조를 만듬
+    # 이진트리의 가장 아래서부터 heapify를 실행하여 힙 구조를 만듬
 
     for i in range(n // 2 - 1, -1, -1):
         heapify(unsorted, i, n)
