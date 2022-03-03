@@ -385,5 +385,65 @@ print(routes)
 
 start = 1
 from collections import deque
-q = deque(start)
+q = deque([start])
 print(q)
+
+
+for st_ in [{}, "number"]:
+    try:
+        int(st_)
+    except ValueError as m:
+        print(m)
+    except TypeError as m:
+        print(m)
+    print("\n")
+
+operations = ["I 16", "D 1"]
+for i in operations:
+    letter, num = i.split(' ')
+    print(num)
+
+if num == 1:
+    print("맞아")
+
+import heapq
+a = [1,2,3,4,6,8,9]
+heapq.heapify(a)
+print(heapq.nlargest(1,a))
+print(a)
+
+h = [[1,7],[2,6],[3,5],[4,8]]
+heapq.heapify(h)
+heapq.heappop(h)
+print(h)
+
+from itertools import permutations
+numbers = [6,10,2]
+temp = []
+# for i in numbers:
+#     temp.append(str(i))
+numbers = list(map(str, numbers)) # string화
+print(list(permutations(numbers,len(numbers))))
+a = permutations(numbers,len(numbers))
+b = list(permutations(numbers,len(numbers)))
+result = list(map(''.join,a))
+result2 = list(map(''.join,b))
+print(max(result))
+print(result)
+
+a = '303030'
+b = '333'
+if a > b :
+    print("303030이더큼")
+else:
+    print("333이 더큼")
+
+print((int(a) > int(b)) - (int(a) < int(b)))
+print(a+b)
+
+from collections import Counter
+num = "12324"
+a = Counter(num)
+b = dict(sorted(a.items()))
+print(b)
+
