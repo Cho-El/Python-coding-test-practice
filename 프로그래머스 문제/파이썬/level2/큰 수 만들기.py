@@ -6,7 +6,7 @@ def solution(number, k):
             stack.append(num)
             continue
         
-        while k > 0 and stack[-1] < num:
+        while k != 0 and stack[-1] < num:
             stack.pop()
             k -= 1
             if not stack:
@@ -20,6 +20,6 @@ def solution(number, k):
 
     stack = stack[:-k] if k > 0 else stack
     return ''.join(stack)
-
+    
 print(solution("4177252841", 4))
         

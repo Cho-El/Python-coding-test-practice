@@ -447,3 +447,27 @@ a = Counter(num)
 b = dict(sorted(a.items()))
 print(b)
 
+hash("leo")
+print(type(hash("leo")))
+
+phoneBook = ["119", "97674223", "1195524421"]
+phoneBook = sorted(phoneBook)
+print(phoneBook)
+
+# 문자열 비교 시 
+a = '1234'
+b = '32jrijgs'
+if a == b[:len(a)]:
+    print(1)
+else:
+    print(2)
+
+ # 1. [ SET x 8 ] 초기화
+    s = [ set() for x in range(8) ] 
+
+N= 5
+# 2. 각 set마다 기본 수 "N" * i 수 초기화
+for i,x in enumerate(s, start=1):
+    x.add( int( str(N) * i ) )
+
+print(s)

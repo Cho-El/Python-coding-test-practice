@@ -1,3 +1,5 @@
+import collections
+
 def solution(participant, completion):
 	hashDict = {}
 	sumHash = 0
@@ -12,3 +14,9 @@ def solution(participant, completion):
 		sumHash -= hash(comp)
 	
 	return hashDict[sumHash]
+
+
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
+
