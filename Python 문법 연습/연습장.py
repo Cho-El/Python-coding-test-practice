@@ -471,3 +471,7 @@ for i,x in enumerate(s, start=1):
     x.add( int( str(N) * i ) )
 
 print(s)
+
+a = [1,2,3]
+for i in range(len(a)-1,-1,-1):
+    print(a[i])
