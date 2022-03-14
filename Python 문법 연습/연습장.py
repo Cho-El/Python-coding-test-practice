@@ -487,3 +487,8 @@ for resul in result:
     print(a, end = ' ')
 print()
 print(int('011'))
+
+a = []
+a.append(1)
+a.append(2)
+print(a)
