@@ -28,3 +28,19 @@ def solution(money, costs):
 
 
 print(solution(money, costs))
+
+def solution2(money, costs):
+    unit = [1, 5, 10, 50, 100, 500]
+    cost_sort = sorted(
+        [[unit[i], costs[i], unit[i] / costs[i]] for i in range(6)], key=lambda x: -x[2]
+    )
+    print(cost_sort)
+
+    make_cost = 0
+    for u, c, _ in cost_sort:
+        n, r = divmod(money, u)
+        money = r
+        make_cost += n * c
+    return make_cost
+
+print(solution2(money, costs))

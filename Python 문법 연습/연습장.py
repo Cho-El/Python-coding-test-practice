@@ -475,3 +475,15 @@ print(s)
 a = [1,2,3]
 for i in range(len(a)-1,-1,-1):
     print(a[i])
+
+from itertools import permutations
+# data = ['1', '2', '3']
+data = '17' # 문자열은 리스트로 사용 가능
+
+result = list(permutations(data,2))
+print(result)
+for resul in result:
+    a = ''.join(resul) # join 함수는 str만 가능
+    print(a, end = ' ')
+print()
+print(int('011'))
