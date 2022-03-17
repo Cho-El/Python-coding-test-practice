@@ -6,5 +6,5 @@ for _ in range(N):
 dasom = a[0]
 b = a[1:]
 b.sort()
-while dasom > max(b):
+# while dasom > max(b):
 	
