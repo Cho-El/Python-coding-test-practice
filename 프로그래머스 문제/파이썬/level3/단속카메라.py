@@ -37,3 +37,4 @@ def solution(routes):
     return answer
 routes = [[-5, -3], [15,-3]]
 print(solution(routes))
+
