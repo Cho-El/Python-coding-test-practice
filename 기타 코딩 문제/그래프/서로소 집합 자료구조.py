@@ -1,10 +1,18 @@
 # 특정 원소가 속한 집합을 찾기
+'''
+노드 번호 1 2 3 4 5
+  부 모  1 1 2 3 4
+'''
 def find_parent(parent, x):
     # 루트 노드를 찾을 때까지 재귀 호출
     if parent[x] != x:
         return find_parent(parent, parent[x])
     return x
 
+'''
+노드 번호 1 2 3 4 5
+  부 모  1 1 1 1 1 
+'''
 def find_parent2(parent, x): # 경로 압축 
     # 루트 노드를 찾을 때까지 재귀 호출
     if parent[x] != x:
