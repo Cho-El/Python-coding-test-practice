@@ -495,4 +495,23 @@ print(a)
 
 a= set()
 
-a = 
+a = [[-20,-15], [-14,-5], [-18,-13], [-5,-3]]
+
+for index, (start, end) in enumerate(a):
+    print(index, start, end)
+a = 1
+b = 2
+
+
+print(min(a,b))
+
+a, b = map(sorted, [[4,2],[3,1]])
+print(a,b)
+
+a = [[-20,-15], [-14,-5], [-18,-13], [-5,-3]]
+routes = list(map(sorted,a))
+print('routes:',routes)
+
+a = [-20,-46]
+b = sorted(a)
+print(b)
