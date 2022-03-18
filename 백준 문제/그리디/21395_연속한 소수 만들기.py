@@ -33,12 +33,12 @@ def penalty(X,Y):
 
 for _ in range(T):
     n = int(input())
-    a = []
-    for i in range(n):
-        t = random.randrange(1, 100000)
-        a.append(t)
+    # a = []
+    # for i in range(n):
+    #     t = random.randrange(1, 100000)
+    #     a.append(t)
 
-    # a = list(map(int, input().split()))
+    a = list(map(int, input().split()))
     a.sort()
     answer = 0
     ts = time.time()
@@ -71,8 +71,8 @@ for _ in range(T):
 
     print(answer)
     # ------------------------------
-    te = time.time()
-    print('time:', te - ts)
+    # te = time.time()
+    # print('time:', te - ts)
 
 
 

@@ -518,3 +518,8 @@ print(b)
 
 for i in range(1,0):
     print("sjofsjo")
+
+a = 1
+
+if not a:
+    print('1')
