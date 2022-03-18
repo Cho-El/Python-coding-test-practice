@@ -2,6 +2,7 @@ import math
 import time
 import random
 from bisect import bisect_left, bisect_right
+import sys
 
 T = int(input())
 
@@ -14,7 +15,8 @@ def eratoss(n):
             while i * j <= n:
                 array[i * j] = False
                 j += 1
-    for i in range(2, 100001):
+
+    for i in range(2, n + 1):
         if array[i]:
             result.append(i)
     return result
@@ -33,17 +35,13 @@ def penalty(X,Y):
 
 for _ in range(T):
     n = int(input())
-    # a = []
-    # for i in range(n):
-    #     t = random.randrange(1, 100000)
-    #     a.append(t)
 
-    a = list(map(int, input().split()))
+    a = list(map(int, sys.stdin.readline().split()))
     a.sort()
     answer = 0
-    ts = time.time()
+    # ts = time.time()
     # 4번 풀이
-    prime_num_list = eratoss(100001) # True, False 담아져 있다.
+    prime_num_list = eratoss(100000) # True, False 담아져 있다.
     p_real = []
 
     # start
@@ -112,7 +110,7 @@ for _ in range(T):
     #         temp = prime_num_list[i:i+n]
     #         answer = min(answer, penalty(temp, a))
 
-    # # 2번 풀이
+    # 2번 풀이
     # if a[0] != 1:
     #     for i in range(a[0], 1, -1):
     #         if is_prime_num(i):
@@ -127,11 +125,7 @@ for _ in range(T):
     #             end = i
     #             break
 
-    # temp = eratoss(end)
-
-    # for i in range(start, end + 1): # start와 end 사이의 모든 소수 담기
-    #     if temp[i]:
-    #         prime_num_list.append(i)
+    # prime_num_list = eratoss(end)
     
     # if len(prime_num_list) < n:
     #     for i in range(prime_num_list[-1]+1, 100001):

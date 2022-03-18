@@ -519,7 +519,15 @@ print(b)
 for i in range(1,0):
     print("sjofsjo")
 
-a = 1
+a = 0
 
 if not a:
     print('1')
+
+a = [1,2,3,4,5]
+
+if 3 in a:
+    print("123242")
+
+print(-1)
+print(max(a))
