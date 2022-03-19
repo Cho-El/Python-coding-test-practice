@@ -14,5 +14,13 @@ def solution(phone_book):
     
     return answer
 
-print(solution(["119", "97674223", "1195524421"]))
+def solution2(phoneBook):
+    phoneBook.sort(key=lambda x: len(x))
+    for a in range(len(phoneBook)):
+        for b in range(a+1, len(phoneBook)):
+            if phoneBook[b][:len(phoneBook[a])] == phoneBook[a]:
+                return False
+    return True
+
+print(solution2(["12","123","1235","567","88"]))
 

@@ -531,3 +531,15 @@ if 3 in a:
 
 print(-1)
 print(max(a))
+
+a = '11192324'
+b =  '119'
+if a in b:
+    print(252)
+
+genres = ["classic", "pop", "classic", "classic", "pop"]
+plays = [500, 600, 150, 800, 2500]
+for ix, (g, p) in enumerate(zip(genres, plays)):
+    print(ix, g, p)
+
+c = [(1,5),(2,6),(3,8)]
