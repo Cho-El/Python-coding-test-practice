@@ -543,3 +543,40 @@ for ix, (g, p) in enumerate(zip(genres, plays)):
     print(ix, g, p)
 
 c = [(1,5),(2,6),(3,8)]
+
+n = 1141414
+print(len(str(n)))
+a = '136654'
+print(a)
+print(a.index(max(a[:6])))
+
+
+a = 3
+def g():
+    global a
+    a += 1
+
+def f():
+    global a
+    a += 1
+g()
+print(a)
+
+a = 1
+while(a < 5):
+    a += 1
+
+print()
+print()
+print()
+print()
+print()
+print()
+
+a = 1
+result = 0
+
+def sum1(a,b):
+    global result
+    result += (a+b)
+
