@@ -5,4 +5,3 @@ graph = []
 for _ in range(n):
 	graph.append(list(map(int, sys.stdin.readline().rstrip())))
 
-print(graph)
