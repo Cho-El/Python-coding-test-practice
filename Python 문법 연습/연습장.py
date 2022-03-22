@@ -620,3 +620,6 @@ size = 5
 while size:
     size -= 1
     print("메롱")
+import sys
+a = sys.stdin.readline().rstrip()
+print(list(a))
