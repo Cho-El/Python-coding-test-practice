@@ -580,3 +580,26 @@ def sum1(a,b):
     global result
     result += (a+b)
 
+a = '1'
+b = '2'
+print(a>b)
+
+a = set([1,2,3,45])
+print(max(a))
+
+a = [set() for _ in range(3)]
+a[0].add(2)
+a[0].add(2)
+a[0].add(5)
+print(a)
+
+crit = 12345
+n_str = list(map(int, str(crit)))
+print(n_str)
+
+
+for i in range(0):
+    print(-1)
+
+a = []
+print(max(a))

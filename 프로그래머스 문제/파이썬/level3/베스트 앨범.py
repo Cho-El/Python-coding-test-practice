@@ -15,8 +15,6 @@ def solution(genres, plays):
     
     gen_rank.sort(key = lambda x : x[1], reverse = True)
 
-    print(gen_rank)
-    print(streaming)
     # 수록
     for r in gen_rank:
         if len(streaming[r[0]]) == 1:
@@ -25,6 +23,7 @@ def solution(genres, plays):
             for i, p in streaming[r[0]][:2]:
                 answer.append(i)
     return answer
+    
 genres = ["classic", "pop", "classic", "classic", "pop"]
 plays = [500, 600, 150, 800, 2500]
 
