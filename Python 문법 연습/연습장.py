@@ -601,5 +601,22 @@ print(n_str)
 for i in range(0):
     print(-1)
 
-a = []
-print(max(a))
+a = set()
+a.add((123,1))
+a.add((123, 1))
+a.add((123,4))
+print(a)
+
+a = set()
+if not a:
+    print(-1)
+
+def a():
+    return -1
+b = a()
+print(b)
+
+size = 5
+while size:
+    size -= 1
+    print("메롱")
