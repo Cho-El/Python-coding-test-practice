@@ -616,10 +616,19 @@ def a():
 b = a()
 print(b)
 
-size = 5
-while size:
-    size -= 1
-    print("메롱")
-import sys
-a = sys.stdin.readline().rstrip()
-print(list(a))
+# size = 5
+# while size:
+#     size -= 1
+#     print("메롱")
+# import sys
+# a = sys.stdin.readline().rstrip()
+# print(list(a))
+
+
+
+visited = [0] * 4
+def d():
+    visited[0] = 1
+    
+d()
+print(visited)
