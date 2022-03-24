@@ -652,3 +652,23 @@ if (1,2) in a:
     a.remove((1,2))
 
 print(a)
+
+a = '00009'
+print(int(a))
+
+a = (0,1)
+b = (0,2)
+c = (1,2)
+d = (0,4)
+e = (1,4)
+if a < b:
+    print(b)
+if b < c:
+    print(c)
+if d < c:
+    print(c)
+else:
+    print(d)
+
+if c < e:
+    print(e)
