@@ -632,3 +632,23 @@ def d():
     
 d()
 print(visited)
+
+import sys
+from itertools import combinations as com
+
+dice_idx = [0,1,2,3,4,5]
+
+n1 = list(com(dice_idx,1))
+n2 = list(com(dice_idx,2))
+n3 = list(com(dice_idx,3))
+size = [[] for _ in range(4)]
+
+for i in range(1,4):
+    size[i] += list(com(dice_idx,i))
+
+a = [(1,2),(3,4),(4,5)]
+
+if (1,2) in a:
+    a.remove((1,2))
+
+print(a)
