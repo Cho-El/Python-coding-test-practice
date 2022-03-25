@@ -1,6 +1,7 @@
 import sys
 from collections import deque
 
+i = 1
 t = int(input())
 for _ in range(t):
 	n, k = map(int, sys.stdin.readline().split())
