@@ -672,3 +672,7 @@ else:
 
 if c < e:
     print(e)
+
+a = {}
+a['2'].append(1)
+print(a)

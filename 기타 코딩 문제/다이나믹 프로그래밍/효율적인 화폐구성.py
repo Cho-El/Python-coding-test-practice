@@ -44,14 +44,13 @@ def how_many(n,m):
 
     print(d[m])
 
-how_many(n,m)
 
 d = [10001] * (m+1)
 d[0] = 0
 
 def how_many2(n,m):
     for i in range(n): # 화폐 단위
-        for j in range(coin[i], m+1): # 금액
+        for j in range(coin[i], m+1): # 금액 
             if d[j-coin[i]] != 10001:
                 d[j] = min(d[j], d[j-coin[i]]+1)
 
@@ -59,3 +58,5 @@ def how_many2(n,m):
         print(-1)
     else:
         print(d[m])
+
+how_many2(n,m)
