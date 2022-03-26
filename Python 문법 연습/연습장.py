@@ -673,6 +673,48 @@ else:
 if c < e:
     print(e)
 
-a = {}
-a['2'].append(1)
+
+
+a = 'i s'
+if ' ' in a:
+    print(-1)
+
+if 126:
+    print(1)
+
+log = 'abcdef : fefe'
+f = 'abcdef : '
+
+print(log.find(f))
+
+if log.find(f) != -1:
+    start = log.find(f) + len(f)
+    print(log[start : ])
+
+a= set()
+a.add('a')
+a.add('b')
+a.add('a')
+print(a)
+
+a = ['g','b','a']
+a.sort()
+print(a)
+
+a = 'B'
+if a.isupper():
+    print(a.lower())
+
+print(a)
+
+temp = [a.lower(),'a','@','e','c']
+temp.sort()
+print(temp)
+a = ['!','a','b','c','d']
+b = ['a','b']
+
+print(b < a)
+
+a = [['!', 'a', 'b', 'c', 'd'], ['b', 'c', 'd'], ['a'], ['!', 'e', 'i', 'l', 'n', 's', 'w']]
+a.sort(key = len)
 print(a)
