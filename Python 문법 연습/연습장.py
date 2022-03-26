@@ -673,6 +673,10 @@ else:
 if c < e:
     print(e)
 
-a = {}
-a['2'].append(1)
+
+print([2,1,0] > [1,1,1,1])
+a = ['2','1','3']
+a.sort(reverse = True)
 print(a)
+value = int(''.join(a))
+print(value)

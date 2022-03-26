@@ -1,9 +1,20 @@
+# 1010 dp 문제인지 몰랐다.
+# 이런 경우 다 적어보고 규칙을 찾아보자
 import sys
-from itertools import combinations as com
-t = int(input())
-for i in range(t):
-    n,m = map(int, sys.stdin.readline().split())
 
-    list_m = [i for i in range(m)]
-    result = len(list(com(list_m, n)))
-    print(result)
+t = int(sys.stdin.readline())
+dp = [[0]*30 for _ in range(30)]
+
+for i in range(30):
+    for j in range(30):
+        if i == 1:
+            dp[i][j] = j
+        else:
+            if i == j:
+                dp[i][j] = 1
+            elif i < j:
+                dp[i][j] = dp[i-1][j-1] + dp[i][j-1]
+
+for i in range(t):
+    n, m = map(int, sys.stdin.readline().split())
+    print(dp[n][m])
