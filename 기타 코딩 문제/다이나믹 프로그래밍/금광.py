@@ -45,6 +45,7 @@ for i in range(test_num):
 				dp[j][i] = array2[j][i] + max(dp[n-1][i-1],dp[n-2][i-1])
 			else: # 중간 줄일때
 				dp[j][i] = array2[j][i] + max(dp[j-1][i-1],dp[j][i-1],dp[j+1][i-1])
+	
 	for i in array2:
 		print(i)
 

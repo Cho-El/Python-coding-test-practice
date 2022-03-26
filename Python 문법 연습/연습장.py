@@ -674,7 +674,6 @@ if c < e:
     print(e)
 
 
-
 a = 'i s'
 if ' ' in a:
     print(-1)
@@ -718,3 +717,4 @@ print(b < a)
 a = [['!', 'a', 'b', 'c', 'd'], ['b', 'c', 'd'], ['a'], ['!', 'e', 'i', 'l', 'n', 's', 'w']]
 a.sort(key = len)
 print(a)
+
