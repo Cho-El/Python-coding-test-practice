@@ -1,5 +1,5 @@
 import sys
-from itertools import combinations
+from itertools import combinations as com
 # sys.setrecursionlimit(10 ** 6)
 # def dfs(graph, visited, response, s):
 #     sum_res = 0
@@ -58,29 +58,31 @@ from itertools import combinations
 
 def main():
     n,m,k = map(int, sys.stdin.readline().split())
-    graph = [[] for _ in range(n)]
-    prefer = [[] for _ in range(n)]
-    one = [0] * m
+    graph = []
+    del_menu = [i for i in range(0,m)]
+    gone = []
     for i in range(n):
-        graph[i].append(list(map(int, sys.stdin.readline().split())))
+        graph.append(list(map(int, sys.stdin.readline().split())))
+    print(graph)
 
-    for i in range(len(graph)): # 사람
-        for j in range(len(graph[i])): # 메뉴
-            if graph[i][j] >= 5:
-                prefer[i].append(j)
-
-    for ix, p in enumerate(prefer):
-        if len(p) == 1:
-            one[ix] += 1
+    del_m = list(com(del_menu,k))
+    print(del_m)
+    for d in del_m:
+        cnt = 0
+        for i in graph:
+            check = 0
+            for j in range(len(i)):
+                if j in d : 
+                    continue
+                if i[j] >= 5:
+                    check += 1
+                    break
+            if check == 0:
+                cnt += 1
+        gone.append(cnt)
     
-    while k == 0:     
-        for o in one:
-            if o == 0:
-                for p in prefer:
-                    if o in p:
-                        p.remove(o)
-                    
-            
+    print(min(gone))
+
 
 
 

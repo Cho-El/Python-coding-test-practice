@@ -718,3 +718,9 @@ a = [['!', 'a', 'b', 'c', 'd'], ['b', 'c', 'd'], ['a'], ['!', 'e', 'i', 'l', 'n'
 a.sort(key = len)
 print(a)
 
+a = ['bc','ba','a']
+a.sort()
+print(a)
+a = '11'
+b = '22'
+print(a+b)
