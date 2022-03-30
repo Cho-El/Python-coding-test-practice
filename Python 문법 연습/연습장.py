@@ -724,3 +724,7 @@ print(a)
 a = '11'
 b = '22'
 print(a+b)
+from collections import deque
+q = deque()
+if not q:
+    print(-1)
