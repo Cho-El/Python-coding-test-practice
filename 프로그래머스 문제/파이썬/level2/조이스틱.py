@@ -65,16 +65,18 @@ def solution2(name):
     for ch in name:
         answer += alphabet_to_num(ch)
 
+    print(answer, name)
     move = n - 1
     for idx in range(n):
         next_idx = idx + 1
         while (next_idx < n) and (name[next_idx] == 'A'):
             next_idx += 1
-        distance = min(idx, n - next_idx) # 현재 위치에서 
+        distance = min(idx, n - next_idx) # 현재 위치에서
         move = min(move, idx + n - next_idx + distance)
-  
+        print(f'idx : {idx}, distance : {distance}, move : {move}')
+   
     answer += move
     return answer
 
-name = "AACAGH"
+name = "JEROEN"
 print(solution2(name))

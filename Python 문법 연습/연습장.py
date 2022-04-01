@@ -728,3 +728,24 @@ from collections import deque
 q = deque()
 if not q:
     print(-1)
+
+# a = sys.stdin.readline().rstrip()
+# b = list(a)
+# b.sort()
+# c = set(b)
+# d = set(a)
+# print(str(a))
+# print(b)
+# print(c)
+# print(d)
+
+a = '1'
+a += 'bcd' * 0
+print(a)
+a = '12345'
+b = a[::-1]
+print(b)
+print(len(a))
+a = '89'
+b = a[len(a)-1:-1:-1]
+print(''.join(list(reversed(a))[1:]))

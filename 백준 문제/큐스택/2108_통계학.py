@@ -8,7 +8,6 @@ num = []
 for _ in range(n):
     num.append(int(sys.stdin.readline()))
 
-print(num)
 num2 = set(num)
 num.sort()
 print(round(sum(num)/n))
