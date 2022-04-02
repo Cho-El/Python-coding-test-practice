@@ -749,3 +749,10 @@ print(len(a))
 a = '89'
 b = a[len(a)-1:-1:-1]
 print(''.join(list(reversed(a))[1:]))
+
+visited = [1,2,3,4,5]
+def a():
+    visited[1] = 200
+
+a()
+print(visited)
