@@ -1,22 +1,24 @@
 import sys
 sys.setrecursionlimit
 answer = 0
-def dfs(graph, a, b, k,visited,cnt):
+result = set()
+def dfs(graph, a, b, k,visited,cnt,edge_t):
     global answer
     if cnt > k: # cnt가 k를 넘었을 때 return False
-        return False
-    if cnt <=k and a == k:
-        # for i in range(len(visited)):
-        #     if visited[i] == 1:
-        return True
+        return
+    if cnt <=k and a == b:
+        result.update(edge_t)
+        return
     
     visited[a] = 1
     for i in graph[a]:
         if not visited[i]:
-            if dfs(graph,i,b,k,visited,cnt + 1):
-                answer += 1
-
-    return True
+            x, y = sorted((a,i))
+            edge_t.append((x,y))
+            dfs(graph,i,b,k,visited,cnt + 1,edge_t)
+            edge_t.pop()
+            visited[i] = 0
+    return
 
 def solution(n, edges, k, a, b):
     cnt = 0
@@ -26,10 +28,12 @@ def solution(n, edges, k, a, b):
         p,q = edge
         graph[p].append(q)
         graph[q].append(p)
+
     
-    print(graph)
-    dfs(graph,a,b,k,visited,cnt)
-    return answer
+    edge_t = []
+    dfs(graph,a,b,k,visited,cnt,edge_t)
+
+    return len(edges)-len(result)
 
 edges = [[0,1],[1,2],[2,3],[4,0],[5,1],[6,1],[7,2],[7,3],[4,5],[5,6],[6,7]]
 print(solution(8,edges,4,0,3))

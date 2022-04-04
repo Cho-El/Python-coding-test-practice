@@ -756,3 +756,11 @@ def a():
 
 a()
 print(visited)
+print(sorted((2,1)))
+a = set() # 리스트가 들어갈수없다.
+b = [[1,2],[2,3],[3,4]]
+c = [(1,2),(2,3)]
+a = (1,2)
+print(a)
+x,y = sorted((2,1))
+print(x,y)
