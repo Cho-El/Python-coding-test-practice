@@ -764,3 +764,6 @@ a = (1,2)
 print(a)
 x,y = sorted((2,1))
 print(x,y)
+
+a= [[1,2],[2,3],[3,4]]
+print(a[:])
