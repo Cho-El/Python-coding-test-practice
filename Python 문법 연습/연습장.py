@@ -767,3 +767,27 @@ print(x,y)
 
 a= [[1,2],[2,3],[3,4]]
 print(a[:])
+
+a = 123
+print(len(str(a)))
+
+for x in range(4):
+  if x == 2:
+    print ('loop out')
+    break
+else:
+  print ('loop end')
+
+a = deque([3])
+print(a)
+
+a = [1,2]
+def b():
+    a[0] = 100
+def c():
+    global a
+    a = [4,5,6]
+b()
+print(a)
+c()
+print(a)
