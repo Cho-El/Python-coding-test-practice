@@ -791,3 +791,19 @@ b()
 print(a)
 c()
 print(a)
+a = ['abc']
+if 'ab' in a:
+    print(1)
+
+a = {'a':1, 'b': 2}
+
+if 'b' in a:
+    print(1)
+
+size = 9
+size //= 3
+print(size)
+print()
+for i in range(x,size*3,size):
+    for j in range(y,size*3,size):
+        print(size)
