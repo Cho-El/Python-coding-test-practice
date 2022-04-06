@@ -807,3 +807,30 @@ print()
 for i in range(x,size*3,size):
     for j in range(y,size*3,size):
         print(size)
+
+print()
+# a = sys.stdin.readline().rstrip().strip('[]')
+a = '[1,2,3,4]'
+a = a.strip('[]')
+print(a)
+b = list(a.split(','))
+b = a.split(',') # 위에 것과 같다.
+print(b)
+print(type(b))
+
+a = [1,2,3,4]
+print(a[::-1])
+print(a[::1])
+
+a = '[]'
+a = a.strip('[]')
+print(a)
+a = a.split(',')
+
+for i in a:
+    print(i)
+    print(type(i))
+
+a = sys.stdin.readline().rstrip().split(',')
+print(a)
+print(list(a))
