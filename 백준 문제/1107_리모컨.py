@@ -1,3 +1,4 @@
+# 브루트포스
 import sys
 
 n = int(input())
