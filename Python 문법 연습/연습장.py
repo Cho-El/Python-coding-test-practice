@@ -831,6 +831,19 @@ for i in a:
     print(i)
     print(type(i))
 
-a = sys.stdin.readline().rstrip().split(',')
-print(a)
-print(list(a))
+# a = sys.stdin.readline().rstrip().split(',')
+# print(a)
+# print(list(a))
+
+m  = 4
+target = 'I' + 'OI' * 4
+print(target)
+
+s = 'abc'
+print(s[:9], end = ' ')
+print('gd')
+print(len(s[:9]))
+
+a = [[0, 0, 0, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 0]]
+
+print(max(a))
