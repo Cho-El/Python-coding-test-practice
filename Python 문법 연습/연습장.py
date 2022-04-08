@@ -847,3 +847,18 @@ print(len(s[:9]))
 a = [[0, 0, 0, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 0]]
 
 print(max(a))
+
+a = 7
+b = 2
+while a < 12:
+    a += 1
+    while b < 5:
+        b += 1
+        if a == 9:
+            break
+    else:
+        b = 2
+        continue
+    b = 1
+    break
+print(a, b)
