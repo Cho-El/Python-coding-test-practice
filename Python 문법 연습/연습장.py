@@ -920,3 +920,17 @@ else:
 a = ['','']
 a[0] += 'D'
 print(a)
+
+a = '1234'
+print(a[1])
+# a[0],a[1] = a[1],a[0]
+# print(a)
+
+def L(n):
+	return (n % 1000) * 10 + n // 1000
+
+def R(n):
+	return (n % 10) * 1000 + n // 10
+
+print(L(1234))
+print(R(1234))

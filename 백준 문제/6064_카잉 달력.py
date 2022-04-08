@@ -65,7 +65,7 @@ Year를 n으로 나누었을 때 나머지가 y
 #         year = -1
 #     print(year)
 
-# 3번 풀이
+# 3번 풀이 정답
 import sys
 from math import gcd
 
