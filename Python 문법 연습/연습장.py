@@ -862,3 +862,42 @@ while a < 12:
     b = 1
     break
 print(a, b)
+
+d = []
+a = '1'
+b = '4'
+c = 's'
+e = 'a'
+heapq.heappush(d, a)
+heapq.heappush(d, b)
+heapq.heappush(d, c)
+heapq.heappush(d, e)
+heapq.heappush(d, '-1')
+heapq.heappush(d, 'c')
+
+print(d)
+print(heapq.heappop(d))
+print(heapq.heappop(d))
+print(heapq.heappop(d))
+print(heapq.heappop(d))
+print(heapq.heappop(d))
+a = [1]
+print(heapq.heappop(a))
+a = [1,2,3,4]
+a[0], a[1], a[2], a[3] = a[1], a[2], a[3], a[0]
+print(a)
+# start, target = map(list,sys.stdin.readline().split())
+# print(start, target)
+
+a = 12
+print(list(str(a)))
+
+a = '12'
+a = list(a)
+print(a[1])
+
+n = ['2','3','4']
+for i in range(len(n)-1):
+	n[i], n[i-1] = n[i-1], n[i]
+
+print(n) 
