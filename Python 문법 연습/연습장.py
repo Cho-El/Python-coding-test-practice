@@ -900,4 +900,23 @@ n = ['2','3','4']
 for i in range(len(n)-1):
 	n[i], n[i-1] = n[i-1], n[i]
 
-print(n) 
+print(n)
+n = ['2','3','4']
+
+for i in range(len(n)-1,0,-1):
+    n[i], n[(i+1) % len(n)] = n[(i+1) % len(n)], n[i]
+print(n)
+
+a = 'a'
+if a:
+    print(1)
+a = 0
+
+if a:
+    print(1)
+else:
+    print(0)
+
+a = ['','']
+a[0] += 'D'
+print(a)
