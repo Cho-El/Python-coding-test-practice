@@ -1,4 +1,4 @@
-#
+# bfs
 # 1번 풀이 시간초과
 # import sys
 # from collections import deque

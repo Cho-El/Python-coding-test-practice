@@ -934,3 +934,41 @@ def R(n):
 
 print(L(1234))
 print(R(1234))
+
+a= 'abcdA'
+b = set(a)
+print(b)
+
+a = {'d':3, 'b':4, 'c':4, 'a':5}
+if 'a' in a:
+    a['a'] += 1
+
+n = max(a.values())
+print(n)
+# print(max(a))
+# for i in a:
+#     print(a[i])
+
+# for i in a.values():
+#     if i == 4:
+
+a = "this is {template} {template} is {state}"
+x = '{template}'
+a = a.replace(x, 'string').rstrip()
+
+print(a, end = '')
+print(1)
+a = {}
+a[1] = 2
+print(a)
+a = defaultdict(list)
+a[2].append(1)
+print(a)
+
+a = '{a}'
+a = a.strip('}{')
+print(a)
+
+f = 'a'
+a = '{' + f'{f}' + '}'
+print(a)
