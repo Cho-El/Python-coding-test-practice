@@ -9,6 +9,7 @@ def solution(call):
                     array[si] += 1
                 else:
                     array[si] = 1
+
     # 최대값 찾기
     delete = [k for k,v in array.items() if max(array.values()) == v]
 
@@ -17,7 +18,7 @@ def solution(call):
     for c in call:
         if c not in delete and c.lower() not in delete:
             result += c
-    
+
     return result
 
 

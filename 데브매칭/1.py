@@ -7,7 +7,7 @@ def insertV(dist, q, visited, i, op):
             q.sort(key= lambda x: x[0])
             visited.add(j)
 
-def solution(dist):
+def solution1(dist):
     answer = []
     q = [(0, 0)]
     visited = set([0])
@@ -45,5 +45,50 @@ def solution(dist):
 
     return answer
 
-dist = [[0,5,2,4,1],[5,0,3,9,6],[2,3,0,6,3],[4,9,6,0,3],[1,6,3,3,0]]
-print(solution(dist))
+def solution(dist):
+    node_len = len(dist[0])
+    print(node_len)
+    arr = [-1] * node_len
+    arr[0] = 0
+    print(arr)
+
+    global answer
+    answer = []
+
+    def dfs(i):
+        global answer
+        for idx in range(i - 1):
+            if dist[i - 1][idx] != abs(arr[i - 1] - arr[idx]):
+                return
+        if i == node_len:
+            answer.append(arr[:])
+            return
+
+        arr[i] = arr[i - 1] + dist[i - 1][i]
+        dfs(i + 1)
+        arr[i] = arr[i - 1] - dist[i - 1][i]
+        dfs(i + 1)
+
+    dfs(1)
+    result = []
+    for li in answer:
+        li = [(v, idx) for idx, v in enumerate(li)]
+        li.sort()
+        li = [idx for _, idx in li]
+        result.append(li)
+    result.sort()
+    return result
+
+
+if __name__ == "__main__":
+    print(
+        solution(
+            [
+                [0, 5, 2, 4, 1],
+                [5, 0, 3, 9, 6],
+                [2, 3, 0, 6, 3],
+                [4, 9, 6, 0, 3],
+                [1, 6, 3, 3, 0],
+            ]
+        )
+    )
