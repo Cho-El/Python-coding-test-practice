@@ -972,3 +972,55 @@ print(a)
 f = 'a'
 a = '{' + f'{f}' + '}'
 print(a)
+
+a = 'abc1!G'
+print(a.islower())
+a = 'abd23'
+print(a.isnumeric())
+a = 'pasword123df'
+
+# print(a.find('password'))
+if a.find('password') != -1:
+    print(1)
+else:
+    print(2)
+a = '1234'
+if not 7 <= len(a) <31:
+    result = False
+
+print(result)
+
+a = 'abcd!@#'
+print(a.find('@!'))
+if 'bc' in a:
+    print(23)
+
+print(a.find('abc'))
+
+a = 'cars are very cool so are arcs and my os'
+a = set(a.split())
+print(a)
+a = list('abc')
+a.pop()
+print(a)
+
+v = 'dog'
+a = 'ogd'
+c = 'god'
+a = {1:1,2:3}
+b = {2:3,1:2}
+print(a==b)
+
+if Counter(a) == Counter(c):
+    print('같음')
+    print(Counter(a),Counter(v),Counter(c))
+else:
+    print('다름')
+
+a = 'cars are very cool so are arcs and my os'
+a = set(a.split())
+q = list(a)
+print(q)
+print(q[1])
+print(q.pop(0))
+print(q)
