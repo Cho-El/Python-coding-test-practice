@@ -1038,4 +1038,15 @@ def b():
     a()
     print(visited23)
 
-b()
+print('123'[1])
+a = '123*23+12'
+a = '3'
+b = '2'
+c = '*'
+d = 'a>b'
+print('값은',eval(a + c + b))
+print(eval(d))
+
+ex = '100-200*300-500+20'
+a = [e for e in ex.split('*')]
+print(a)
