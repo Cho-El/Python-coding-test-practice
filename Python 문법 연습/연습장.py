@@ -1024,3 +1024,18 @@ print(q)
 print(q[1])
 print(q.pop(0))
 print(q)
+
+
+a = ["POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"]
+print(a[2][4])
+
+def a():
+    visited23[0] = 10
+
+def b():
+    global visited23 # 밖에 선언을 안해줘도된다
+    visited23 = [1,2,3,4]
+    a()
+    print(visited23)
+
+b()

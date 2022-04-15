@@ -1,4 +1,4 @@
-#
+# 힙
 import sys, heapq
 
 # 1번 풀이
