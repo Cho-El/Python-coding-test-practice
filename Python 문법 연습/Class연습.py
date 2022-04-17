@@ -26,3 +26,7 @@ for i in range(3):
 	print(i)
 
 print(i)
+
+a = {'a':1,'b':2,'c':3}
+if 0 in a.values():
+	print(234)

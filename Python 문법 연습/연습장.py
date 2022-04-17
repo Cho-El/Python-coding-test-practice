@@ -1050,3 +1050,10 @@ print(eval(d))
 ex = '100-200*300-500+20'
 a = [e for e in ex.split('*')]
 print(a)
+
+
+a = {'a':1,'b':2}
+if 3 in a.values():
+    print(123)
+else:
+    print(234)

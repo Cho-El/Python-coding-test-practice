@@ -7,21 +7,86 @@
 편하게 문제를 해결할 수 있습니다.
 숫자에 대한 배열을 준비하고, 연산자에 대한 배열을 준비한 다음, 우선순위에 맞는 연산자의 인덱스를 연산자 배열에서 찾은 후 기억 합니다.
  그 후 숫자 배열에서 해당 인덱스와 다음 인덱스를 계산하는 방식을 이용하면 됩니다.
+ eval() 함수 -> string 수식계산을 가능하게함
+ isdigit() -> str값이 숫자인지 파악
+deque()는 deepcopy가 되지 않는다.
 '''
-# 분할정복 and 완전탐색
+# 1번 풀이 완전탐색
 import sys, re
 from itertools import permutations as pe
-def solution(expression):
-    sign = ['*','+','-']
+import copy
+from collections import deque
+def solution1(expression):
+    array = ['*','+','-']
     result = 0
-    pe_signs = list(pe(sign,3))
-    ex = re.split('[-|+|*]',expression)
+    ops = list(pe(array,3))
+    # ex = re.split('[-|+|*]',expression)
+    # expression을 숫자 수식으로 나누기
+    temp = ''
+    start = []
+    for i in expression:
+        if i.isdigit() == True:
+            temp += i
+        else:
+            start.append(temp)
+            start.append(i)
+            temp = ''
+    start.append(temp)
+    
+    answer = 0
+    for op in ops:
+        ex = deque(start)
+        for i in op:
+            q = deque()
+            while ex:
+                now = ex.popleft()
+                if now == i:
+                    num1 = q.pop()
+                    num2 = ex.popleft()
+                    q.append(str(eval(num1 + now + num2)))
+                else:
+                    q.append(now)
+            ex = q
+        answer = max(answer, abs(int(ex.pop())))
 
-    for pe_sign in pe_signs:
-        for x in pe_sign:
+    
+    return answer
             
-        result = max(result, )
-            
+print(solution1("100-200*300-500+20"))
+
+
+
+# 2번 풀이 분할 정복
+import re
+from itertools import permutations as pe
+
+def cal(ex,n,op):
+    if n == 2:
+        return str(eval(ex))
+    else:
+        if op[n] == '+':
+            temp = []
+            for e in ex.split('+'):
+                temp.append(cal(e,n+1,op))
+            result = str(eval('+'.join(temp)))
+        if op[n] == '-':
+            temp = []
+            for e in ex.split('-'):
+                temp.append(cal(e,n+1,op))
+            result = str(eval('-'.join(temp)))
+        if op[n] == '*':
+            temp = []
+            for e in ex.split('*'):
+                temp.append(cal(e,n+1,op))
+            result = str(eval('*'.join(temp)))
         
+    return result
 
-print(solution("100-200*300-500+20"))
+def solution2(expression):
+    op = ['-','*','+']
+    ops = pe(op,3)
+    answer = 0
+    for i in ops:
+        answer = max(answer, abs(int(cal(expression,0,i))))
+    return answer
+print(solution2("100-200*300-500+20"))
