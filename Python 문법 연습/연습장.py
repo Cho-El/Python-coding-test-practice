@@ -1057,3 +1057,10 @@ if 3 in a.values():
     print(123)
 else:
     print(234)
+
+a = 0
+b = 1
+if not(a==0 and b == 0):
+    print(123)
+else:
+    print(234)
