@@ -37,17 +37,21 @@ def solution(s):
         temp = ''
         start = s[:cut]
         for i in range(cut,len(s),cut):
-            if start == s[i:i+cut]:
+            if start == s[i:i+cut] :
                 cnt += 1
             else:
                 if cnt == 1:
                     temp += start
+                    start = s[i:i+cut]
                     cnt = 1
                 else:
                     temp += str(cnt) + start
-                    start = s[i+cut:i+2*cut]
+                    start = s[i:i+cut]
                     cnt = 1
-        
+        if cnt == 1:
+            temp += start
+        else:
+            temp += str(cnt) + start
         smallest = min(smallest, len(temp))
     
     return smallest
