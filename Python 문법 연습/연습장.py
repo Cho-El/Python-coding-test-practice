@@ -1064,3 +1064,8 @@ if not(a==0 and b == 0):
     print(123)
 else:
     print(234)
+
+a = [['1','2','3'],['2','1','3']]
+a.sort(reverse = True)
+
+print(*a)
