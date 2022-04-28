@@ -1069,3 +1069,22 @@ a = [['1','2','3'],['2','1','3']]
 a.sort(reverse = True)
 
 print(*a)
+
+import numpy as np
+
+a = [['1','2','3'],['2','1','3']]
+print('np:')
+
+np.random.seed(42)
+index = np.arange(49)
+np.random.shuffle(index)
+print(index)
+print(type(index))
+a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+c = [21,22,23,24,25,26,27,28,29,210,211,212,213,214,215]
+a = np.array(a)
+b = np.arange(10)
+print(b)
+print(type(b))
+print(type(a))
+print(a[b])
