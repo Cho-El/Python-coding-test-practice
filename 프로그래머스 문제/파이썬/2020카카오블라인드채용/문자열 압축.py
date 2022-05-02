@@ -1,5 +1,5 @@
 import sys
-def solution(s):
+def solution1(s):
     smallest = sys.maxsize
 
     if len(s) == 1:
@@ -56,6 +56,7 @@ def solution2(s):
         result = ""
     
     return min(length)
+
 
 if __name__ == '__main__':
     s = ["aabbaccc","ababcdcdababcdcd","abcabcdede","abcabcabcabcdededededede","xababcdcdababcdcd"]

@@ -1069,7 +1069,77 @@ a = [['1','2','3'],['2','1','3']]
 a.sort(reverse = True)
 
 print(*a)
-import numpy
 
-a = a.numpy()
-print(a[0,1])
+import numpy as np
+
+a = [['1','2','3'],['2','1','3']]
+print('np:')
+
+np.random.seed(42)
+index = np.arange(49)
+np.random.shuffle(index)
+print(index)
+print(type(index))
+a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+c = [21,22,23,24,25,26,27,28,29,210,211,212,213,214,215]
+a = np.array(a)
+b = np.arange(10)
+print(b)
+print(type(b))
+print(type(a))
+print(a[b])
+dic = {'s':'2', 'd':'1'}
+a = {'e':'6', 'f':'9', 'd':'4'}
+# dic.update(a)
+print(dic)
+g = {**a, **dic}
+print(g)
+print(type(g))
+c = {'a','b'}
+print(type(c))
+
+a = '0123a'
+for i in a:
+    print(i.isdigit())
+
+class a:
+    def __init__(self, name):
+        self.name = name
+
+data = a('s')
+data2 = a('b')
+d = [data.name,data2.name]
+print(d)
+
+
+db = {
+    'rule': ['xx-xx','xxx-xxx-xx','x-xx-x'], # 검증을 위한 규칙
+    'pin': {
+        '00-11' : {
+            'syz':40,
+            'yzw':80,
+            'xyu':90
+        },
+        '00-112-33' : {
+            'abc':50,
+            'def':80,
+            'ghi':50
+        },
+        '00-111-22' : {
+            'sdz':40,
+            'yww':50,
+            'xzu':90
+        },
+        '00-11-2' : {
+            'sdz':20,
+            'yww':30,
+            'xzu':40
+        }
+    }
+}
+a = []
+temp = ''
+a = ' '.join(db['pin']['00-11'].keys())
+print(a)
+    
+print(f'연결된 계정은 : {a} 입니다.')
