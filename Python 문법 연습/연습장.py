@@ -1088,3 +1088,58 @@ print(b)
 print(type(b))
 print(type(a))
 print(a[b])
+dic = {'s':'2', 'd':'1'}
+a = {'e':'6', 'f':'9', 'd':'4'}
+# dic.update(a)
+print(dic)
+g = {**a, **dic}
+print(g)
+print(type(g))
+c = {'a','b'}
+print(type(c))
+
+a = '0123a'
+for i in a:
+    print(i.isdigit())
+
+class a:
+    def __init__(self, name):
+        self.name = name
+
+data = a('s')
+data2 = a('b')
+d = [data.name,data2.name]
+print(d)
+
+
+db = {
+    'rule': ['xx-xx','xxx-xxx-xx','x-xx-x'], # 검증을 위한 규칙
+    'pin': {
+        '00-11' : {
+            'syz':40,
+            'yzw':80,
+            'xyu':90
+        },
+        '00-112-33' : {
+            'abc':50,
+            'def':80,
+            'ghi':50
+        },
+        '00-111-22' : {
+            'sdz':40,
+            'yww':50,
+            'xzu':90
+        },
+        '00-11-2' : {
+            'sdz':20,
+            'yww':30,
+            'xzu':40
+        }
+    }
+}
+a = []
+temp = ''
+a = ' '.join(db['pin']['00-11'].keys())
+print(a)
+    
+print(f'연결된 계정은 : {a} 입니다.')
