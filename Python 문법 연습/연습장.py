@@ -1069,3 +1069,7 @@ a = [['1','2','3'],['2','1','3']]
 a.sort(reverse = True)
 
 print(*a)
+import numpy
+
+a = a.numpy()
+print(a[0,1])
