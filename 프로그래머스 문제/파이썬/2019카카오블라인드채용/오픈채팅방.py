@@ -14,8 +14,16 @@ def solution(record):
         'Leave':'님이 나갔습니다.'
     }
     for a in answer:
-        if len(a) == 3: # enter인 경우
+        if a[0] == 'Enter': # enter인 경우
             a[2] = user_info[a[1]]
+            temp_str = a[2] + '님이 들어왔습니다.'
+            result.append(temp_str)
+        else:
+            temp_str = user_info[a[1]] + '님이 나갔습니다.'
+            result.append(temp_str)
 
+    return result
 
-    return answer
+if __name__ == '__main__':
+    i = ["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]
+    print(solution(i))
