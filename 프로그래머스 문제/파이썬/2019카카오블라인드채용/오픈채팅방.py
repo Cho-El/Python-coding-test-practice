@@ -9,10 +9,7 @@ def solution(record):
             if sentence[0] == 'Change':
                 continue
         answer.append(sentence)
-    form = {
-        'Enter':'님이 들어왔습니다.',
-        'Leave':'님이 나갔습니다.'
-    }
+   
     for a in answer:
         if a[0] == 'Enter': # enter인 경우
             a[2] = user_info[a[1]]

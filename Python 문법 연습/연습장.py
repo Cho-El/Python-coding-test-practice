@@ -1143,3 +1143,10 @@ a = ' '.join(db['pin']['00-11'].keys())
 print(a)
     
 print(f'연결된 계정은 : {a} 입니다.')
+
+a = 'fejife1'
+print(a[:-1])
+import datetime
+a = '01:00:04.002'
+c = '2s'
+print(a[7:]-'2')
