@@ -13,22 +13,19 @@ def solution(lines):
 		print('end = ',end)
 		start = end - dif + dp(2016,9,15,0,0,0,1000)
 		print(type(start),type(end))
-		array.append((start, end))
-	print(array[0][0])
-	print(dp(2016,9,15,0,0,0,1000))
-	a = array[0][0] + dp(2016,9,15,0,0,0,1000)
-	print(a)
-	# for crit in array:
-	# 	cnt = 0
-	# 	crit_s = crit[1]
-	# 	crit_e = dp(2016,9,15,0,0,0,1000) + crit_s
-	# 	print(crit_s)
-	# 	print(crit_e)
-	# 	for a in array:
-	# 		if crit_s >= a[0] and crit_e <= a[1]:
-	# 			cnt += 1
+		array.append([start, end])
+	
+	for crit in array:
+		cnt = 0
+		crit_s = crit[1]
+		print(dp.isoformat(crit_s - dp(2016,9,15,0,0,1)))
+		crit_e = dp.fromisoformat('2016-09-15 ' + dp.isoformat(crit_s - dp(2016,9,15,0,0,1)))
+		print(crit_e)
+		for a in array:
+			if crit_s >= a[0] and crit_e <= a[1]:
+				cnt += 1
 		
-	# 	result = max(result, cnt)
+		result = max(result, cnt)
 
 	return result
 
