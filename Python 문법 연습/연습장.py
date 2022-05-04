@@ -1147,6 +1147,31 @@ print(f'연결된 계정은 : {a} 입니다.')
 a = 'fejife1'
 print(a[:-1])
 import datetime
-a = '01:00:04.002'
+a = '2016-09-15 01:00:04.0010'
+b = '2016-09-15 01:00:04'
+
 c = '2s'
-print(a[7:]-'2')
+
+from datetime import datetime as dp
+from datetime import time
+dateformat = '%Y-%m-%d %H:%M:%S'
+# t = dp.strptime(a,dateformat)
+a = dp(2016,9,15,1,0,4)
+print('time = ',a)
+# start = dp.fromisoformat(a)
+end = dp.fromisoformat('2016-09-15 00:00:01.100') # timedelta는 연산가능
+print(a - end)
+# print(type(start - end))
+
+# print(dp.time(t))
+start = time.fromisoformat('01:00:04.001') # 문자열 -> time객체로
+end = time.fromisoformat('00:00:01.321') # 문자열 -> time 객체로
+print(type(start))
+# print(start - end)
+
+a = dp(2020, 7, 18, 13, 26, 23)
+b = dp(2020,7,18, 12, 25, 30)
+print(a-b)
+
+a = '12324'
+print(a[0:-1])

@@ -1,11 +1,37 @@
+from datetime import datetime as dp
 def solution(lines):
 	array = []
+	result = 0
 	for line in lines:
 		temp = list(line.split(' '))
-		start = temp[7:] - temp[2][:-1]
+		second = int(temp[2][0])
+		micro = 0
+		if temp[2][1] != 's':
+			micro = int(temp[2][2:-1]) * 1000
+		dif = dp(2016,9,15,0,0,second,micro)
+		end = dp.fromisoformat(temp[0] + ' ' + temp[1])
+		print('end = ',end)
+		start = end - dif + dp(2016,9,15,0,0,0,1000)
+		print(type(start),type(end))
+		array.append((start, end))
+	print(array[0][0])
+	print(dp(2016,9,15,0,0,0,1000))
+	a = array[0][0] + dp(2016,9,15,0,0,0,1000)
+	print(a)
+	# for crit in array:
+	# 	cnt = 0
+	# 	crit_s = crit[1]
+	# 	crit_e = dp(2016,9,15,0,0,0,1000) + crit_s
+	# 	print(crit_s)
+	# 	print(crit_e)
+	# 	for a in array:
+	# 		if crit_s >= a[0] and crit_e <= a[1]:
+	# 			cnt += 1
+		
+	# 	result = max(result, cnt)
 
-    answer = 0
-    return answer
+	return result
+
 
 if __name__ == '__main__':
 	a =  [[
