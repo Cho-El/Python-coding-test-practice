@@ -1184,3 +1184,7 @@ c = 2
 t = float(throughput[:-1])
 print('t = ', t)
 print(a - c + b)
+
+i = ''
+if not(i) and int(i) == 1:
+    print('fjie')

@@ -1,19 +1,25 @@
+'''
+파이썬에서 소수의 연산의 경우
+소수가 실수와 무리수를 둘다 표현해야하므로 일반연산을 하면
+
+이상한 값이 나온다.
+ex) 0.1 + 0.3 == 0.400000000000000000000004
+
+'''
+
 def solution(lines):
 	array = []
 	result = 0
 	for line in lines:
 		year, time, throughput = line.split(' ')
-		hour, minute, second = map(float, time.split(':'))
-		end_second = hour * 3600 + minute * 60 + second
-		
-		print('t = ', float(throughput[:-1]))
-		start_second = end_second - float(throughput[:-1]) + 0.001
-		print(start_second, end_second)
+		hour, minute, second = time.split(':')
+		end_second = int((int(hour) * 3600 + int(minute) * 60 + float(second)) * 1000)
+		start_second = end_second - int(float(throughput[:-1]) * 1000) + 1
 		array.append((start_second, end_second))
 	
 	for crit in array:
 		crit_start = crit[1]
-		crit_end = crit_start + 0.999
+		crit_end = crit_start + 1000 - 1
 		cnt = 0
 		for a in array:
 			if not(a[1] < crit_start or a[0] > crit_end):
