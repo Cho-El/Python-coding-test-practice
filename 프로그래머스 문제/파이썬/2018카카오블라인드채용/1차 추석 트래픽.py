@@ -1,34 +1,27 @@
-from datetime import datetime as dp
 def solution(lines):
 	array = []
 	result = 0
 	for line in lines:
-		temp = list(line.split(' '))
-		second = int(temp[2][0])
-		micro = 0
-		if temp[2][1] != 's':
-			micro = int(temp[2][2:-1]) * 1000
-		dif = dp(2016,9,15,0,0,second,micro)
-		end = dp.fromisoformat(temp[0] + ' ' + temp[1])
-		print('end = ',end)
-		start = end - dif + dp(2016,9,15,0,0,0,1000)
-		print(type(start),type(end))
-		array.append([start, end])
+		year, time, throughput = line.split(' ')
+		hour, minute, second = map(float, time.split(':'))
+		end_second = hour * 3600 + minute * 60 + second
+		
+		print('t = ', float(throughput[:-1]))
+		start_second = end_second - float(throughput[:-1]) + 0.001
+		print(start_second, end_second)
+		array.append((start_second, end_second))
 	
 	for crit in array:
+		crit_start = crit[1]
+		crit_end = crit_start + 0.999
 		cnt = 0
-		crit_s = crit[1]
-		print(dp.isoformat(crit_s - dp(2016,9,15,0,0,1)))
-		crit_e = dp.fromisoformat('2016-09-15 ' + dp.isoformat(crit_s - dp(2016,9,15,0,0,1)))
-		print(crit_e)
 		for a in array:
-			if crit_s >= a[0] and crit_e <= a[1]:
+			if not(a[1] < crit_start or a[0] > crit_end):
 				cnt += 1
-		
-		result = max(result, cnt)
+	
+		result = max(cnt, result)
 
 	return result
-
 
 if __name__ == '__main__':
 	a =  [[
@@ -50,4 +43,4 @@ if __name__ == '__main__':
 			"2016-09-15 21:00:02.066 2.62s"
 			]]
 	for i in a:
-		solution(i)
+		print(solution(i))

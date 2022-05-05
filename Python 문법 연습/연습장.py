@@ -1176,3 +1176,11 @@ print(a-b)
 
 a = '12324'
 print(a[0:-1])
+
+a = 3604.001
+b = 0.001
+throughput = '2.0s'
+c = 2
+t = float(throughput[:-1])
+print('t = ', t)
+print(a - c + b)
