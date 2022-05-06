@@ -1185,6 +1185,23 @@ t = float(throughput[:-1])
 print('t = ', t)
 print(a - c + b)
 
-i = ''
-if not(i) and int(i) == 1:
-    print('fjie')
+# i = ''
+# if not(i) and int(i) == 1:
+#     print('fjie')
+
+from collections import defaultdict
+
+a = defaultdict(list)
+a['12'].append(1)
+print(a)
+
+answers = [(1,2),(2,3),(4,9),(1,8)]
+answers.sort(key = lambda x : x[::-1], reverse=True)
+print(answers)
+
+a = [(1,2),(2,3),(3,7),(4,6),(5,10)]
+print(a[::-1])
+
+a = [[1,1,1,3,0,2,0,0,2,1,3],[1,1,2,0,1,2,2,0,3,1,3]]
+a.sort(key = lambda x : x[::-1], reverse=True)
+print(a)
