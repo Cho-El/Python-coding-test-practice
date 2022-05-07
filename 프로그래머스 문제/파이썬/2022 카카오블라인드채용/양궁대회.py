@@ -13,13 +13,13 @@ def calcScoreDiff(info, myshots):
             myScore += (10 - i)
     return myScore - enemyScore
     
-def dfs(info, myshots, n, i):
+def dfs(info, myshots, n, i): # 어피치, 라이언, 화살의 갯수 ,depth
     global MAX_SCORE_DIFF, answers
     if i == 11:
-        if n != 0:
+        if n != 0: # 0점까지 왔는데 화살이 남아있을 때
             myshots[10] = n
         scoreDiff = calcScoreDiff(info, myshots)
-        if scoreDiff <= 0:
+        if scoreDiff <= 0: # 
             return
         result = copy.deepcopy(myshots)
         if scoreDiff > MAX_SCORE_DIFF:
@@ -29,11 +29,13 @@ def dfs(info, myshots, n, i):
         if scoreDiff == MAX_SCORE_DIFF:
             answers.append(result)
         return
+
     # 점수 먹는 경우
     if info[i] < n:
         myshots.append(info[i] + 1)
         dfs(info, myshots, n - info[i] - 1, i + 1)
         myshots.pop()
+
     # 점수 안먹는 경우
     myshots.append(0)
     dfs(info, myshots, n, i + 1)

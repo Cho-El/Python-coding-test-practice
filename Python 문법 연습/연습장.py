@@ -1205,3 +1205,53 @@ print(a[::-1])
 a = [[1,1,1,3,0,2,0,0,2,1,3],[1,1,2,0,1,2,2,0,3,1,3]]
 a.sort(key = lambda x : x[::-1], reverse=True)
 print(a)
+print(sys.maxsize)
+
+def b():
+    global problems
+    problems = [1,2,3,4,5]
+
+def a(problems):
+    print('1:',problems)
+    problems[1] = 10
+    print('2:',problems)
+
+b()
+a(problems)
+print(problems)
+
+a = []
+a.sort()
+print(a)
+
+a = []
+if not a:
+    print(1)
+
+def a():
+    return
+t = a
+
+if not t:
+    print(t)
+
+a = [1,2]
+b = [3,4]
+print(a + b)
+
+a = [1,2,3,4]
+v = [1,2,3,4]
+if a == v:
+    print(2)
+
+queue1 = [1,2,3,4]
+queue2 = [2,3,4,5]
+queue3 = deque([1,2,3,4])
+queue1 = deque(queue1)
+queue2 = deque(queue2)
+print(queue1, queue2)
+# print(queue1.popleft())
+print(queue1)
+
+if queue1 == queue3:
+    print(4)
