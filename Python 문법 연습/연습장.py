@@ -1255,3 +1255,10 @@ print(queue1)
 
 if queue1 == queue3:
     print(4)
+
+def a():
+    c = 100000
+    def b():
+        print(c+1)
+    b()
+print(a())
