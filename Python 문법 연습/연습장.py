@@ -1262,3 +1262,11 @@ def a():
         print(c+1)
     b()
 print(a())
+
+q = []
+heapq.heappush(q,(0,5,2))
+heapq.heappush(q,(1,3,1))
+heapq.heappush(q,(1,2,1))
+heapq.heappush(q,(2,1,1))
+while q:
+    print(heapq.heappop(q))
