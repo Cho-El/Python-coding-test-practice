@@ -1270,3 +1270,11 @@ heapq.heappush(q,(1,2,1))
 heapq.heappush(q,(2,1,1))
 while q:
     print(heapq.heappop(q))
+
+intensity_list = [[3,4],[5,3],[2,3],[1,3]]
+intensity_list.sort(key = lambda x : x[::-1])
+print(intensity_list)
+
+a = [[1,2,3],[3,4,5]]
+a[0], a[1] = a[1], a[0]
+print(a)
