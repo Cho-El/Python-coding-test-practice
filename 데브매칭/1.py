@@ -72,6 +72,7 @@ def solution(dist):
     dfs(1)
     result = []
     for li in answer:
+        # 0을 기준으로 거리를 표현한 li
         li = [(v, idx) for idx, v in enumerate(li)]
         li.sort()
         li = [idx for _, idx in li]

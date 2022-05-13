@@ -18,7 +18,7 @@ def solution(queue1, queue2):
         if now_sum == target_num:
             result_array.append((start, end))
         now_sum -= total_q[start]
-    
+    print(result_array)
     if result_array:
         for start, end in result_array:
             if start < len(total_q) // 2:
@@ -38,7 +38,7 @@ def solution(queue1, queue2):
     return answer
     
 if __name__ == '__main__':
-    a = [([3, 2, 7, 2],[4, 6, 5, 1]	),([4,6,1,3],[2,7,2,5]),([1, 2, 1, 2],[1, 10, 1, 2]), ([1, 1], [1, 5])]
+    a = [([3, 2, 7, 2],[4, 6, 5, 1]	),([2,7,2,4],[6,5,1,3]),([1,10,5,1],[2,8,2,1]),([1, 2, 1, 2],[1, 10, 1, 2]), ([1, 1], [1, 5])]
     for i in a:
         q1, q2 = i
         print(solution(q1, q2))
