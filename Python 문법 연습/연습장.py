@@ -1278,3 +1278,12 @@ print(intensity_list)
 a = [[1,2,3],[3,4,5]]
 a[0], a[1] = a[1], a[0]
 print(a)
+
+q = deque(['1','2','3'])
+print('x'.join(q))
+
+a = 'abc'
+print(len(a.split('a')))
+print(a.split('a'))
+a = [1,2,3,4,5]
+print(a.split(3))
