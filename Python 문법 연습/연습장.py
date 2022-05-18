@@ -1282,8 +1282,37 @@ print(a)
 q = deque(['1','2','3'])
 print('x'.join(q))
 
-a = 'abc'
-print(len(a.split('a')))
-print(a.split('a'))
-a = [1,2,3,4,5]
-print(a.split(3))
+# a = 'abc'
+# print(len(a.split('a')))
+# print(a.split('a'))
+# a = [1,2,3,4,5]
+# print(a.split(3))
+
+
+dq = deque([1,2,3])
+cnt = 0
+for i in range(len(dq)):
+    a = dq.popleft()
+    print(i, a)
+    cnt += 1
+    dq.append(6)
+    print(dq)
+    if cnt == 10:
+        break
+def b(li, i, c):
+    if i == 4:
+        li.append(5)
+        c = 2
+        return
+    c = 10
+    b(li, i + 1, c)
+    print(c)
+    print(li)
+
+def a():
+    li = [1,2,3,4]
+    b(li, 0, 1)
+    print(li)
+
+# 함수에서 재귀로 쓰이는 변수는 
+print(a())
