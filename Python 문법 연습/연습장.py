@@ -133,6 +133,7 @@ t = 'ab'+'c'
 print(t)
 
 from collections import deque
+from re import X
 
 start = 1
 queue = deque([(1,2)])
@@ -1316,3 +1317,23 @@ def a():
 
 # 함수에서 재귀로 쓰이는 변수는 
 print(a())
+b = 3
+a = b > 10
+print(a)
+
+print()
+x = 0
+def a():
+    x = 1
+    def b():
+        x += 5
+        print('b : ', x)
+        x = 2
+        print('b : ', x)
+    b()
+    print(x)
+a()
+print(x)
+
+
+    
