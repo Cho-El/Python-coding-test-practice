@@ -1328,7 +1328,6 @@ def a():
     def b():
         x += 5
         print('b : ', x)
-        x = 2
         print('b : ', x)
     b()
     print(x)
