@@ -1322,17 +1322,46 @@ a = b > 10
 print(a)
 
 print()
-x = 0
+# x = 0
+# def a():
+#     x = 1
+#     def b():
+#         x += 5
+#         print('b : ', x)
+#         print('b : ', x)
+#     b()
+#     print(x)
+# a()
+# print(x)
+
+
+a = deque([[1,1,1,1,1]])
+print(a)
+a.append([2,3,4,5,6])
+print(a)
+print(a.popleft())
+print(a.popleft())
+
+a = [[1,2],[3,4]]
+a[0] = [5,5]
+print(a)
+
+b = 10
+a = [2,b]
+print(a)
+
+a = [1,2,3]
+a = 'AAAA'
+print(list(a))
+
 def a():
-    x = 1
-    def b():
-        x += 5
-        print('b : ', x)
-        print('b : ', x)
-    b()
-    print(x)
-a()
-print(x)
+    global v
+    v = [3,4,5,6]
 
+def b():
+    global v
+    v = [1,2,3,4]
+    a()
+    print(v)
 
-    
+b()
