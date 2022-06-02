@@ -1365,3 +1365,13 @@ def b():
     print(v)
 
 b()
+
+a = deque([1,2,3,4])
+cnt = 0
+for i in range(len(a)):
+    cnt += 1
+    a.appendleft(5)
+    print(i, cnt)
+    a.pop()
+    a.pop()
+    print(a)

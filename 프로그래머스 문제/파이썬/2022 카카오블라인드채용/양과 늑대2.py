@@ -1,7 +1,27 @@
 import sys
-from collections import defaultdict
-def dfs(path, graph, s, w):
-	pass
+from collections import defaultdict, deque
+def dfs(paths, info, graph, s, w):
+	global answer
+
+	answer = max(answer, s)
+	for i in range(len(paths)):
+		node = paths.popleft()
+		if info[node] == 0: # 양인 경우
+			for j in graph[node]:
+				paths.append(j)
+			dfs(paths, info, graph, s + 1, w)
+			for j in graph[node]:
+				paths.pop()
+
+		else: # 늑대인 경우
+			if s > w + 1:
+				for j in graph[node]:
+					paths.append(j)
+				dfs(paths, info, graph, s, w + 1)
+				for j in graph[node]:
+					paths.pop()
+				paths.append(node)
+		
 
 def solution(info, edges):
 	global answer
@@ -10,7 +30,8 @@ def solution(info, edges):
 	for i in edges:
 		graph[i[0]].append(i[1])
 	
-    dfs([0],graph, sheep, wolf)
+	path = deque([0])
+	dfs(path, info, graph, 0, 0)
 	return answer
 
 if __name__ == '__main__':
