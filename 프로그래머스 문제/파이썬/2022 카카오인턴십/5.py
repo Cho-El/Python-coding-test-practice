@@ -24,6 +24,7 @@ def shiftrow(rc):
     for i in range(column_size - 1, 0, -1):
         rc[i], rc[i-1] = rc[i-1], rc[i]
     return
+    
 def solution(rc, operations):
 
     for op in operations:

@@ -29,9 +29,41 @@ def seq(M, array):
             cnt +=1
         now_sum -= array[start]
 
+    while start < len(array) and end < len(array):
+        if now_sum < M:
+            now_sum += array[end]
+            end += 1
+        else:
+            if now_sum == M:
+                cnt += 1
+            now_sum -= array[start]
+            start += 1
+
+    print(start, end, cnt)
+    return cnt
+
+def seq2(M, array):
+    start = 0
+    end = 0
+    now_sum = 0
+    cnt = 0
+
+    while start < len(array) and end < len(array):
+        if now_sum < M: # end가 움직일 때
+            now_sum += array[end]
+            end += 1
+        else: # start가 움직일 때
+            if now_sum == M:
+                cnt += 1
+            now_sum -= array[start]
+            start += 1
+
+    print(start, end, cnt)
+    return cnt
+
 M = 5
 array = [1,2,3,2,5]
-print(seq(M, array))
+print(seq(M, array), seq(M, array))
 
 '''
 구간 합문제

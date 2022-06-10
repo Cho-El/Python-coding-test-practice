@@ -1375,3 +1375,10 @@ for i in range(len(a)):
     a.pop()
     a.pop()
     print(a)
+
+a = [1,2,3]
+def b():
+    a.append(4)
+
+b()
+print(a)
