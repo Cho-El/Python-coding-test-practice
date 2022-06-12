@@ -1382,3 +1382,14 @@ def b():
 
 b()
 print(a)
+
+a = '2 3 5'
+b = a.split()
+print(b)
+
+a = [1,2,5,6]
+b = [1,2]
+
+
+print(b<a)
+print(set(a))
