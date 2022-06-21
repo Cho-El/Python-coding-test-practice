@@ -18,6 +18,7 @@ def solution(queue1, queue2):
         if now_sum == target_num:
             result_array.append((start, end))
         now_sum -= total_q[start]
+        
     print(result_array)
     if result_array:
         for start, end in result_array:

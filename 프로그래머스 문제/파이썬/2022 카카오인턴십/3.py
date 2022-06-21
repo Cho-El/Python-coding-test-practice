@@ -1,3 +1,4 @@
+# 그리디 DP
 import sys
 import copy
 sys.setrecursionlimit(10**7)
