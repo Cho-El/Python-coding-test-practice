@@ -1393,3 +1393,17 @@ b = [1,2]
 
 print(b<a)
 print(set(a))
+
+a = [[5,3,4],[5,2,3],[4,1,3],[5,1,5],[4,3,6],[4,2,1],[4,3,3],[4,3,2],[4,2,1],[3,1,5]]
+
+a.sort(key = lambda x : [x[0],x[1],x[2]])
+print(a)
+
+a = [1,2,3]
+b = [3,4,5]
+c = [6,7,8]
+
+for ix, (a,b,c) in enumerate(zip(a,b,c)):
+    tmp = [ix,a,b,c]
+    print(tmp)
+    
