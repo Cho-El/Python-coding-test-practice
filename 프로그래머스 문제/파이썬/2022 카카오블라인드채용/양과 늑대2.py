@@ -20,7 +20,8 @@ def dfs(paths, info, graph, s, w):
 				dfs(paths, info, graph, s, w + 1)
 				for j in graph[node]:
 					paths.pop()
-				paths.append(node)
+					
+		paths.append(node)
 		
 
 def solution(info, edges):
