@@ -1393,3 +1393,7 @@ b = [1,2]
 
 print(b<a)
 print(set(a))
+
+type1 = 1
+a = 1 if type == 2 else 2
+print(a)
