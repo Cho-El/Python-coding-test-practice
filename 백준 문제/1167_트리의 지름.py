@@ -17,10 +17,12 @@ def dfs(start, dist):
     global result, visited
     result = max(result, dist)
     visited[start] = True
+    can_visit = 0
     
     for next_node in graph[start]:
         node, edge = next_node
         if not visited[node]:
+            
             dist += edge
             dfs(node, dist)
             visited[node] = False

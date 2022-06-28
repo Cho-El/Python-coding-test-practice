@@ -1405,3 +1405,16 @@ c = [6,7,8]
 for ix, (a,b,c) in enumerate(zip(a,b,c)):
     tmp = [ix,a,b,c]
     print(tmp)
+
+from copy import deepcopy
+a = [1,2,3,4]
+b = deepcopy(a)
+print(b)
+INF = sys.maxsize
+
+a = [[1,2],[3,4]]
+b = [[3,4],[1,2]]
+print( a == b)
+
+c = deepcopy([b])
+print(c)
