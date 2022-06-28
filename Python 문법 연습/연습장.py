@@ -1418,3 +1418,5 @@ print( a == b)
 
 c = deepcopy([b])
 print(c)
+
+print(a)
