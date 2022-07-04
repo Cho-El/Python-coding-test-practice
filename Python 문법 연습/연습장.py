@@ -1420,3 +1420,29 @@ c = deepcopy([b])
 print(c)
 
 print(a)
+
+a = 1
+c = [1,2,3,4,5]
+def b():
+    global a
+    c[2] += 1
+    a += 1
+b()
+print(a)
+print(c)
+
+print(0)
+print(bin(1 << 20))
+b = ~(1 << 20)
+print(bin(b))
+a = (1 << 20) - 1
+print(bin(a))
+
+temp = 'ejifeji '
+temp = temp.rstrip()
+
+print(temp,1)
+
+for i in range((1 << 3)):
+    print(i)
+    
