@@ -1,18 +1,18 @@
-# 
-import sys
-input = sys.stdin.readline
+# # 
+# import sys
+# input = sys.stdin.readline
 
-n = int(input())
-graph = []
-for i in range(n):
-    graph.append([int(j) for j in input().rstrip()])
+# n = int(input())
+# graph = []
+# for i in range(n):
+#     graph.append([int(j) for j in input().rstrip()])
     
-def dfs():
-    pass
+# def dfs():
+#     pass
 
 
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
 
 def solution(n, arr):
     M = [[[0] * 10 for j in range(1 << n)] for i in range(n)] # M[artist][path(bin)][price]
