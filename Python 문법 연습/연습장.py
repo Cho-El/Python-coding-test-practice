@@ -1448,3 +1448,5 @@ for i in range((1 << 3)):
     
 for i in range((1 << 0)):
     print(i)
+    
+print(bin((1 << 3)))
