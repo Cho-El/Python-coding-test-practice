@@ -1,4 +1,4 @@
-# 비트마스킹
+# 비트마스킹 dp
 import sys
 input = sys.stdin.readline
 n = int(input())
