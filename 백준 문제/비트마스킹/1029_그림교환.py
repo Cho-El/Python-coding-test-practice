@@ -14,9 +14,20 @@ def dfs(artist, visited, price):
     if dp[artist][visited][price] != 0:
         return dp[artist][visited][price]
     
-    if visited == (1 << n) - 1:
+    if visited == (1 << n) - 1: # 다 방문 되었으면 끝
         return 1
     
+    count = 1
+    for next_a in range(1, n):
+        if graph[artist][next_a] < price or (1 << next_a) & visited > 0:
+            continue
+        count = max(count, dfs(next_a, (1 << next_a) | visited, graph[artist][next_a]) + 1)
+        
+    dp[artist][visited][price] = count 
+
+    return count
+
+print(dfs(0,1,0))
     
 
 

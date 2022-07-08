@@ -1450,3 +1450,13 @@ for i in range((1 << 0)):
     print(i)
     
 print(bin((1 << 3)))
+
+# input = sys.stdin.readline
+# t = input().rstrip()
+# print(t, 1)
+# print(type(t))
+# cnt = 0
+# for j in list(t.split()):
+#     cnt += 1
+#     print(j, end = ' ')
+#     print(cnt)
