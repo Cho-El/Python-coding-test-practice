@@ -16,8 +16,6 @@ def dfs(artist, visited, price):
     
     if visited == (1 << n) - 1:
         return 1
-    
-    
 
 
 # import sys
