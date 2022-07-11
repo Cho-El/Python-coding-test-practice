@@ -1460,3 +1460,7 @@ print(bin((1 << 3)))
 #     cnt += 1
 #     print(j, end = ' ')
 #     print(cnt)
+
+# input = sys.stdin.readline
+# for i in map(int, input().rstrip().split()):
+#     print(i)
