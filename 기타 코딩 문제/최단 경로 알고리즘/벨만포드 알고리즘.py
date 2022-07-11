@@ -47,7 +47,7 @@ def bf(start):
     for i in range(n):
         for j in range(m):
             cur = edges[j][0]
-            next_node == edges[j][1]
+            next_node = edges[j][1]
             cost = edges[j][2]
 
             if dist[cur] != INF and dist[next_node] > dist[cur] + cost:
@@ -66,3 +66,14 @@ else:
             print(-1)
         else:
             print(dist[i])
+
+def bford(start):
+    distance = [[float('inf')]] * (n + 1)
+    distance[start] = 0
+    
+    for i in range(n): # 노드의 개수
+        for u,v,w in edges:
+            if distance[u] != float('inf') and distance[u] + w < distance[v]:
+                distance[v] = distance[u] + w    
+                if i == n - 1: # 음의 사이클 확인
+                    return True   
