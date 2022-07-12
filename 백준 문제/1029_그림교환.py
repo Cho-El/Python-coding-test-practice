@@ -1,4 +1,4 @@
-# 
+# 비트마스킹
 import sys
 input = sys.stdin.readline
 
