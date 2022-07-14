@@ -7,7 +7,7 @@ def insertV(dist, q, visited, i, op):
             q.sort(key= lambda x: x[0])
             visited.add(j)
 
-def solution1(dist):
+def solution1(dist): # 규빈이 풀이
     answer = []
     q = [(0, 0)]
     visited = set([0])
@@ -45,7 +45,7 @@ def solution1(dist):
 
     return answer
 
-def solution(dist):
+def solution(dist): # 정한이 풀이
     node_len = len(dist[0])
     print(node_len)
     arr = [-1] * node_len
@@ -70,6 +70,7 @@ def solution(dist):
         dfs(i + 1)
 
     dfs(1)
+    print(answer)
     result = []
     for li in answer:
         # 0을 기준으로 거리를 표현한 li

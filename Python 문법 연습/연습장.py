@@ -1464,3 +1464,10 @@ print(bin((1 << 3)))
 # input = sys.stdin.readline
 # for i in map(int, input().rstrip().split()):
 #     print(i)
+
+a = 1
+x = [1,2,3,4]
+y = x[a]
+a = 2
+z = x[a]
+print(y,z)
