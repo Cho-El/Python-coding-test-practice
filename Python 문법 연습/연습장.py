@@ -1471,3 +1471,5 @@ y = x[a]
 a = 2
 z = x[a]
 print(y,z)
+
+print(x.pop(0))
