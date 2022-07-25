@@ -1473,3 +1473,40 @@ z = x[a]
 print(y,z)
 
 print(x.pop(0))
+
+temp = 'A'
+for i in range(0,26):
+    print(chr(ord(temp) + i))
+
+
+b = ['a','b','a']
+c = 'abaccd'
+a = set(c)
+d = list(a)
+print(list(com(a,2)))
+
+
+d = [12,3,4,5]
+d.sort()
+print(d)
+
+d = set()
+for i in range(3):
+    d.add(i)
+
+# d = sorted(list(d))
+
+print(d)
+print(len(d))
+print(sys.maxsize)
+print(sys.maxsize + 1)
+
+a = sys.maxsize
+print(a)
+print(a + 1)
+
+for i in range(3,2):
+    print(125)
+    
+a = [1,2,3]
+print(set(a))
