@@ -1,4 +1,5 @@
 # dp 문제 같으면 다 써서 규칙을 찾아보자
+
 import sys
 input = sys.stdin.readline
 n = int(input())

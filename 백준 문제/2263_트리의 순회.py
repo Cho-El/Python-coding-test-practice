@@ -1,4 +1,5 @@
 # 트리 분할정복
+
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
