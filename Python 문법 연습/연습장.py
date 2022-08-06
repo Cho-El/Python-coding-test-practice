@@ -1510,3 +1510,11 @@ for i in range(3,2):
     
 a = [1,2,3]
 print(set(a))
+
+import math
+print(math.ceil(3/2))
+
+a = set([1,2,3,4,5])
+b = set([1,1,5,5,4,3,2,2,2,])
+if a == b:
+    print(12020)
