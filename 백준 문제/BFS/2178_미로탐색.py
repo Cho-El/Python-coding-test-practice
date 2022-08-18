@@ -4,6 +4,7 @@ from collections import deque
 def bfs(start):
     q = deque([start])
     while q:
+        
         x,y = q.popleft()
         for i in range(4):
             nx = x + dx[i]
