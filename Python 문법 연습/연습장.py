@@ -1518,3 +1518,47 @@ a = set([1,2,3,4,5])
 b = set([1,1,5,5,4,3,2,2,2,])
 if a == b:
     print(12020)
+
+from collections import defaultdict
+
+a = defaultdict(list)
+a['feji']
+print(a)
+
+a = ["1","2"]
+print(''.join(a))
+
+
+all_info = {
+    "fe":[22,30,4,5],
+    'f':[6,3,9,3]
+}
+for i in all_info.values():
+    i.sort()
+    
+print(all_info)
+
+a = []
+temp = [1,2,3,4]
+a.append(temp)
+print(a)
+
+for i in range(12, 1):
+    print(1512)
+
+a = [1,2,3]
+a1,a2,a3 = a
+print(a1,a2,a3)
+
+date = deque(['MON', 'TUE', 'WED','THU','FRI','SAT','SUN'])
+date = list(date)
+print(date[:4])
+print(a[:2])
+
+from bisect import bisect_right
+from bisect import bisect_left
+a = [[2019,4,6],[2018,5,7],[2018,4,2],[2017,6,8],[2018,1,1]]
+a = [5,6,8,9]
+print(a)
+print(bisect_right(a,9))
+print(bisect_left(a,9))
