@@ -23,7 +23,7 @@ def dfs(x,y, h):
             dfs(nx,ny,h)
 
 
-for h in range(max(max,water_board)):
+for h in range(101):
     visited = [[False] * n for _ in range(n)]
     temp = 0
     for x in range(n):
