@@ -3,10 +3,10 @@ def solution(openA, closeB):
     close_start_time = 0
     while closeB:
         if openA:
+            start = openA.pop(0)
             if close_start_time == 0:
-                start = openA.pop(0)
+                continue
             else:
-                start = openA.pop(0)
                 while close_start_time > start and openA:
                     start = openA.pop(0)
                 
@@ -25,7 +25,7 @@ def solution(openA, closeB):
     return answer
 
 if __name__ == '__main__':
-    openA = [[3,5,7], [4,7,9,16],[10,11],[10]]
-    closeB = [[4,10,12],[2,5,12,14,20],[1,2,3,4,16],[11,500]]
+    openA = [[3,5,7], [4,7,9,16],[10,11],[10],[5,10]]
+    closeB = [[4,10,12],[2,5,12,14,20],[1,2,3,4,16],[11,500],[20,30,40]]
     for o,c in zip(openA, closeB):
         print(solution(o, c))

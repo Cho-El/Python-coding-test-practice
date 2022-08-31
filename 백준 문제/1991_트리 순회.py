@@ -7,6 +7,8 @@ class Node:
         self.data = data
         self.left = left
         self.right = right
+
+
 # 전위 순회
 def preorder(node):
     print(node.data, end = '')
