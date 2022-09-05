@@ -673,10 +673,6 @@ a = [1,2,3]
 a1,a2,a3 = a
 print(a1,a2,a3)
 
-date = deque(['MON', 'TUE', 'WED','THU','FRI','SAT','SUN'])
-date = list(date)
-print(date[:4])
-print(a[:2])
 
 from bisect import bisect_right
 from bisect import bisect_left
@@ -685,3 +681,13 @@ a = [5,6,8,9]
 print(a)
 print(bisect_right(a,9))
 print(bisect_left(a,9))
+
+t = [10,11]
+a = [1,2]
+t = a
+a = [3,4]
+print(t)
+print(a)
+a[0] = 5
+print(t)
+print(a)
