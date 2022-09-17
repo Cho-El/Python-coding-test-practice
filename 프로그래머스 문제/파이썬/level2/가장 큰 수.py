@@ -32,7 +32,6 @@ def solution3(numbers):
     return str(int(''.join(numbers)))
 
 
-
 import functools
 
 def comparator(a,b):
