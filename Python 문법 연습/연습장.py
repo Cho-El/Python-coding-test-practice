@@ -643,6 +643,7 @@ if a == b:
     print(12020)
 
 from collections import defaultdict
+from re import A
 
 a = defaultdict(list)
 a['feji']
@@ -692,3 +693,68 @@ a[0] = 5
 print(t)
 print(a)
 
+a = [[1,3],[2,3]]
+for i in a:
+    temp = []
+    temp += i
+    temp.append(5)
+    print(temp)
+
+print(a)
+
+a = "20220619"
+b = "20221218"
+if a > b:
+    print("s")
+else:
+    print("b")
+    
+    validDate = 1
+    
+a = 1
+b = 'f'
+b += str(a)
+print(b)
+
+a = [[2,10],[2,8]]
+a.sort()
+print(a)
+
+def a():
+    global t
+    t = []
+    b()
+    print(t)
+
+def b():
+    global t
+    t.append(2)
+
+a()
+
+a = [1,2,3,4]
+
+for i in a:
+    print(i)
+    if i == 2:
+        i = 10
+        print(i)
+
+print(a)
+
+a = {
+    (1,2) : [(3,4),(5,2)]
+}
+if (1,2) in a:
+    print(a[(1,2)])
+
+
+def b():
+    l = [4,5,6,7]
+    a(l)
+    print(l)
+    
+def a(l):
+    l[2] = 5
+b()
+from collections import defaultdict
