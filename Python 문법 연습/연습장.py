@@ -758,3 +758,18 @@ def a(l):
     l[2] = 5
 b()
 from collections import defaultdict
+
+a = [[10,2,4],[10,1,8]]
+a.sort()
+print(a)
+a = {'d':1,'c':2}
+for i in a:
+    print(i)
+    
+
+x = 1
+y = 2
+z = 3
+a = [x,y,z]
+z = 10
+print(a)

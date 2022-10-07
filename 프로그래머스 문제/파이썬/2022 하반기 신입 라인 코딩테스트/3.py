@@ -1,4 +1,3 @@
-from typing import List
 from collections import deque
 def solution(n: int, m: int, fires: List[List[int]], ices: List[List[int]]) -> List[List[int]]:
     answer = []

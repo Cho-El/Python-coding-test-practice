@@ -9,6 +9,7 @@ def solution(q,x):
 			print(0)
 			return
 	heapq.heappush(q,-x)
+ 
 if __name__ == '__main__':
 	n = int(input())
 	q = []

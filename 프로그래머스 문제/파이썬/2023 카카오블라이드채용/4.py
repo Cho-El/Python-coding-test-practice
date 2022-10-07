@@ -19,7 +19,6 @@ def solution(numbers):
 
 def treePossible(num):
     center = len(num)//2
-    
     if len(num) == 1:
         return True
     
