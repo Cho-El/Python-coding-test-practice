@@ -643,6 +643,7 @@ if a == b:
     print(12020)
 
 from collections import defaultdict
+from copy import deepcopy
 from re import A
 
 a = defaultdict(list)
@@ -773,3 +774,49 @@ z = 3
 a = [x,y,z]
 z = 10
 print(a)
+
+a = [1,2,3,4]
+b = []
+b.append(a)
+a[1] = 10
+print(b)
+a[2] = 5
+print(b)
+t = []
+def dfs(li1,li2,n,start):
+    global t
+    if n == 3 or n == 5:
+        temp = deepcopy(li2)
+        t.append(temp)
+        return
+    
+    for i in range(start,len(li1)):
+        n += li1[i]
+        li2.append(li1[i])
+        dfs(li1,li2,n,i + 1)
+        li2.pop()
+        n -= li1[i]
+
+dfs([1,2,3,4],[],0,0)
+print(t)
+
+a = [[2,3,1,0,0,0,0,1,3,0,0],[2,1,0,2,0,0,0,2,3,0,0]]
+print(a[::-1])
+
+def a(x,y,z):
+    t = [x,y,z]
+    x = 1
+    print(t)
+    print(x)
+
+a(10,20,30)
+
+a = [1,2,3,4,5]
+b = deepcopy(a)
+c = a[:]
+d = a
+a[2] = 10
+print(b)
+print(c)
+print(a)
+print(d)
