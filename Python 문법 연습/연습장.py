@@ -811,12 +811,19 @@ def a(x,y,z):
 
 a(10,20,30)
 
+
 a = [1,2,3,4,5]
 b = deepcopy(a)
 c = a[:]
 d = a
-a[2] = 10
 print(b)
+c[3] = 20
 print(c)
 print(a)
 print(d)
+
+a = [[1,2],[2,3],[3,4]]
+temp = a[:]
+temp[1][1] = 10
+print(a)
+print(temp)
