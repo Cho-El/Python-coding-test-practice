@@ -827,3 +827,8 @@ temp = a[:]
 temp[1][1] = 10
 print(a)
 print(temp)
+
+a = [1,2,3,4]
+b = a[2]
+a[2] = 5
+print(b)
