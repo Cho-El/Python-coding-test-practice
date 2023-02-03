@@ -832,3 +832,57 @@ a = [1,2,3,4]
 b = a[2]
 a[2] = 5
 print(b)
+
+start = 2
+end = start + 1
+start += 1
+print(start)
+print(end)
+a = 100000000800
+print(a % (10**9 + 7))
+
+
+a = [[1,9],[1,2],[3,4],[5,6]]
+a.sort(key = lambda x : [x[0], x[1]])
+print(a)
+
+a = [[3,1],[4,1],[5,0]]
+a.sort(key = lambda x : x[1])
+print(a)
+
+def a(n):
+    n.append(2)
+
+t = []  
+a(t)
+print(t)
+
+a = [[[1,2],[2,3]]]
+
+if [[2,3], [1,2]] in a:
+    print(15)
+else:
+    print(16)
+    
+    
+a = [10,20]
+b = [3,20]
+if a > b:
+    print(1)
+else:
+    print(10)
+
+def a(v):
+    num = 5
+    b(v,num)
+    print(v,num)
+    print(num)
+
+def b(v,num):
+    v[1] = 10
+    v[2] += 1
+    num += 2
+
+t = [1,2,3,4,5,6]
+a(t)
+print(t)
