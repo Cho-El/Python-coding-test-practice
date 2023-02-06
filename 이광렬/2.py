@@ -4,6 +4,7 @@ def solution(n,relation,dirname):
     graph = [[] for _ in range(n + 1)]
     for root,child in relation:
         graph[root].append(child)
+        
     print(graph)
     dfs(1, graph, dirname, 0, 0)
     return result
