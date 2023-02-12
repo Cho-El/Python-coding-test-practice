@@ -886,3 +886,15 @@ def b(v,num):
 t = [1,2,3,4,5,6]
 a(t)
 print(t)
+
+ga = [1,2,3,4]
+
+def a(name):
+    name[3] = 2
+
+a(ga)
+print(ga)
+
+a = [1,2,3,4]
+a = 2* a
+print(a)

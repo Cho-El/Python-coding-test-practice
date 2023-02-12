@@ -26,7 +26,7 @@ def dfs(x,y,v):
         nx = x + dx[i]
         ny = y + dy[i]
         if 0 <= nx < xLen and 0 <= ny < yLen and v[nx][ny] == 1:
-            dfs(x,y,v)
+            dfs(nx,ny,v)
 
     return
 print(solution([[1,1,0,1,1],[0,1,1,0,0],[0,0,0,0,0],[1,1,0,1,1],[1,0,1,1,1],[1,0,1,1,1]]))
