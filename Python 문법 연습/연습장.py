@@ -898,3 +898,19 @@ print(ga)
 a = [1,2,3,4]
 a = 2* a
 print(a)
+
+t = [1,2,3,4]
+def a(t):
+    t = [4,5,6,7]
+    return
+def b():
+    return
+a(t)
+print(t)
+
+a = 1
+def t(x):
+    if x == a:
+        print(True)
+
+t(1)
