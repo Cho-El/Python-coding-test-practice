@@ -898,3 +898,12 @@ print(ga)
 a = [1,2,3,4]
 a = 2* a
 print(a)
+a = 'abcd'
+print(a[-2:])
+a = 'd'
+print(a[-3:])
+import sys
+a = sys.stdin.readline().rstrip()
+
+b = "abc"
+print(a == b)
