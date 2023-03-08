@@ -914,3 +914,12 @@ def t(x):
         print(True)
 
 t(1)
+a = 'abcd'
+print(a[-2:])
+a = 'd'
+print(a[-3:])
+import sys
+a = sys.stdin.readline().rstrip()
+
+b = "abc"
+print(a == b)
