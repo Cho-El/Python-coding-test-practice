@@ -31,11 +31,12 @@ def solution(gold_prices):
 def dfs(gold_prices, havingGold, profit, start, totalLen):
     global result
     for i in range(start,totalLen - 1):
-        # 금 가격이 내일 오를 것으로 예상되면 오늘 금을 구매
+        # 금 가격이 내일 오를 것으로 예상되면 살 수도 있고 안 살수도 있다.
         if gold_prices[i] < gold_prices[i + 1] and not havingGold:
-            havingGold = 1
-            profit -= gold_prices[i]
-            continue
+            # 사는 경우
+            dfs(gold_prices, 1, profit - gold_prices[i], i + 1, totalLen)
+            # 안 사는 경우
+            dfs(gold_prices, 0, profit, i + 1, totalLen)
         
         # 금을 가지고 있는 경우
         elif havingGold:
@@ -56,3 +57,4 @@ print(solution([2,5,1,3,4]))
 print(solution([7,2,5,6,1,4,2,8]))
 print(solution([7,6,5,4,3,2,1]))
 print(solution([7,2,3,4,5,6,99,101]))
+print(solution([3,5,1,100]))
