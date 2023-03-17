@@ -1,3 +1,4 @@
+# 그리디
 import sys
 input = sys.stdin.readline
 l,r = input().split()

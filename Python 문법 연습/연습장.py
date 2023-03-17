@@ -565,7 +565,6 @@ print(visited) # [1,0,0,0]
 # 하지만 리스트 자체를 바꾸는 경우 global 처리를 안하는 경우 함수 내부 변수로 인식
 visited = [0] * 4
 def change_list():
-    visited
     visited = [1,2,3,4,5]
 change_list()
 print(visited) # [0,0,0,0]
@@ -722,3 +721,29 @@ a = 'abcd'
 print(a[-2:])
 a = 'deg'
 print(a[-10:])
+
+# for문 안의 i값의 변경하는 경우 -> 영향 받지않음
+n = [1,2,3,4,5]
+for i in range(len(n)):
+    print(n[i], end = '') # 12345
+    i += 2
+print()
+i = 0
+while i < len(n):
+    print(n[i], end = '')
+    i += 2
+print()
+
+# elif 문 안에 기준 if문과 구문이 겹치면 어떻게 될까? -> 첫 if문만 돌아감
+a = 5
+if a > 1:
+    print(2)
+elif a > 1:
+    print(1)
+    
+for i, a in enumerate([9,8,7,6]):
+    print(i)
+
+a = {'abc': [5,2]}
+a = sorted(a.items(), key = lambda x:[x[1][0], -x[1][1]])
+print(a[:6])

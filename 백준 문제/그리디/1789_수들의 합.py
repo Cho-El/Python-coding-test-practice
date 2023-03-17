@@ -1,9 +1,12 @@
+# 그리디
+import sys
+input = sys.stdin.readline
 S = int(input())
-cnt = 0
-for i in range(1,S):
-	if S < i:
-		break
-	S -= i
-	cnt += 1
+temp = 1
+result = 0
+while S >= temp:
+    S -= temp
+    temp += 1
+    result += 1
 
-print(cnt)
+print(result)
