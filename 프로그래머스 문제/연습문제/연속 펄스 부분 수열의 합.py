@@ -10,12 +10,15 @@ def solution(sequence):
         pulseSeqNum1 *= -1
         pulseSeqNum2 *= -1
     
-    start, end = 0, 0
-    sum1 = 0
-    sum2 = 0
-    while start < len(sequence) and end < len(sequence):
-        # 전까지의 최대합 보다 현재 까지의 합이 더 클 때
-            # 현재 까지의 합으로 갱신 시켜준다.
-            
-        if sum1 < 
-    return answer
+    dp1 = [0] * len(sequence)
+    dp1[0] = newS1[0]
+    dp2 = [0] * len(sequence)
+    dp2[0] = newS2[0]
+    
+    for i in range(1,len(sequence)):
+        dp1[i] = max(dp1[i - 1] + newS1[i], newS1[i])
+        dp2[i] = max(dp2[i - 1] + newS2[i], newS2[i])
+    
+    return max(max(dp1),max(dp2))
+
+print(solution([2,3,-6,1,3,-1,2,4]))
