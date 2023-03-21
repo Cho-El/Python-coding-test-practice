@@ -1,5 +1,4 @@
 import sys
-# sys.setrecursionlimit(10 ** 6)
 def solution(board):
 	global result
 	global visited
