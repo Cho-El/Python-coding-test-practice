@@ -14,5 +14,9 @@ def solution(S):
         
     return result
 
-print(solution("<><??>>"))
-print(solution("<<?"))
+print(solution("<><??>>")) # Should return 4
+print(solution("??????"))  # Should return 6
+print(solution("<<?"))     # Should return 2
+print(solution("<<????"))  # Should return 6
+print(solution("<<<?<??>><")) # Should return 8
+print(solution("???<>>?<?")) # should return 6
