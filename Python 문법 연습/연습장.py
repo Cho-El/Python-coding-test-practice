@@ -741,9 +741,15 @@ if a > 1:
 elif a > 1:
     print(1)
     
+# enumerate를 사용하는 경우 한번 순회 후 해당 값에는 아무것도 들어 있지 않다.
 for i, a in enumerate([9,8,7,6]):
     print(i)
 
+# 딕셔너리의 정렬 -> 리스트로 바꾼 후 가능
 a = {'abc': [5,2]}
 a = sorted(a.items(), key = lambda x:[x[1][0], -x[1][1]])
 print(a[:6])
+
+# 이차원 리스트 마지막 값 뽑아내기
+a = [[1,2],[2,3]]
+print(a[-1][-1])
