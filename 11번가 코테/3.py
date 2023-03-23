@@ -14,6 +14,22 @@ def solution(S):
         
     return result
 
+def solution(S):
+    n = len(S)
+    max_length = 0
+
+    def search_symmetric(i, j):
+        nonlocal max_length
+        if i >= 0 and j < n:
+            if S[i] in {'<', '?'} and S[j] in {'>', '?'}:
+                max_length = max(max_length, j - i + 1)
+                search_symmetric(i - 1, j + 1)
+
+    for i in range(n):
+        search_symmetric(i, i + 1)
+
+    return max_length
+
 print(solution("<><??>>")) # Should return 4
 print(solution("??????"))  # Should return 6
 print(solution("<<?"))     # Should return 2
