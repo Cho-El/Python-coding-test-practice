@@ -5,7 +5,7 @@ def solution(wall):
     wallNearInfo = []
     for i in range(len(wall)):
         wall[i] = list(map(int, wall[i].split()))
-
+    
     for x in range(len(wall)):
         start = 0
         temp = []
@@ -38,10 +38,11 @@ def solution(wall):
     for i in range(len(wallNearInfo)):
         for j in range(len(wallNearInfo[i])):
              if wallNearInfo[i][j] == importantBlockNum:
-                  result.append([i,j]) 
+                  result.append([i,j])
+
     result.sort()
     return result
-   
+
 print(solution(["3 1 1 2", "2 3 2", "1 1 2 3"]))
 print(solution(["1 1", "1 1"]))
 print(solution(["1 1 1", "3"]))
