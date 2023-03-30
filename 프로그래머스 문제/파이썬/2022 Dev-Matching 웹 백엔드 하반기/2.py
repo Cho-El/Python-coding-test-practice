@@ -18,7 +18,8 @@ def solution(maps):
         answer = max(answer, value)
         
     return answer
-
+import sys
+sys.setrecursionlimit
 def bfs(x,y,maxX,maxY, maps):
     global visited
     dx = [0,0,1,-1]
