@@ -761,3 +761,6 @@ print(a)
 
 # list 값바꾸기
 a = [['a',2,3], ['b',6,3]]
+
+a = "a b c d"
+print(a.split())
