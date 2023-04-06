@@ -25,7 +25,8 @@
 #         ny = y + dy[i]
 #         if 0 <= nx <lenX and 0 <= ny <lenY and maps[nx][ny] != '0' and maps[nx][ny] != 'X':
 #             dfs(nx,ny,maps,lenX,lenY)
- 
+import sys
+sys.setrecursionlimit(10**6)
 def solution(maps):
     answer = []
     maps = [list(m) for m in maps]
