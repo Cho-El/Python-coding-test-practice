@@ -1,8 +1,6 @@
-import java.net.SocketPermission;
-
 public class Main {
     public static void main(String[] args){
-        final ExternalClass externalClass = new ExternalClass(); 
+        final ExternalClass externalClass = new ExternalClass(100,200); 
         //  externalClass = new ExternalClass(); // final로 선언했으므로 재할당 불가능
         String[] strArray = externalClass.returnPuStringArray();
         System.out.println("public int : " + externalClass.puNum);
@@ -12,5 +10,7 @@ public class Main {
             System.out.print(" " + s);
         }
         System.out.println();
+        System.out.println("privateNum : " + externalClass.getprivateNum());
+        
     }
 } 
