@@ -26,3 +26,10 @@ console.log('\\    /\\')
 console.log(' )  ( \')')
 console.log('(  /  )')
 console.log(' \\(__)|')
+
+
+var array1 = ['1','2','3']
+var changeArray = array1.map((x) => Number(x))
+console.log(changeArray)
+
+console.log(false)

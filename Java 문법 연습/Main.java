@@ -11,6 +11,12 @@ public class Main {
         }
         System.out.println();
         System.out.println("privateNum : " + externalClass.getprivateNum());
-        
+        executePrivateMethodInStaticMethod();
+    }
+    private static void executePrivateMethodInStaticMethod() {
+        System.out.println("private Method execute in static method");
+    }
+    public static void executeNonStaticPublicMethodInStaticMethod() {
+        System.out.println("Non Static Public Method execute in static method");
     }
 } 

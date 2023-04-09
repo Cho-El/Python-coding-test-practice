@@ -7,7 +7,7 @@ public class ExternalClass extends ParentExternalClass{
     static int staticNum = 11; // 값을 바꿀 수 있고, 해당 클래스로 생성된 객체는 이 값으 공유한다.
 
     public ExternalClass(int puNum, int prNum) { // 생성자
-        super(prNum,puNum);
+        super(prNum,puNum); // 부모 생성자 매개 변수
         this.puNum = 2;
         this.prNum = 1;
     }
