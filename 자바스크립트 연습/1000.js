@@ -37,3 +37,9 @@ console.log(false)
 let str1 = "a"
 let int1 = 1
 console.log(`str1 : ${str1}, int1 : ${int1}`)
+
+let array = new Array()
+let N = 10
+for (let i = 0; i < N; i++) {
+    array[i] = i + 1
+}
