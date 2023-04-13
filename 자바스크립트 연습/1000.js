@@ -33,3 +33,7 @@ var changeArray = array1.map((x) => Number(x))
 console.log(changeArray)
 
 console.log(false)
+
+let str1 = "a"
+let int1 = 1
+console.log(`str1 : ${str1}, int1 : ${int1}`)
