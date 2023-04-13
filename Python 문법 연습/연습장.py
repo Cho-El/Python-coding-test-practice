@@ -773,3 +773,10 @@ else:
 
 if 180 * 3/2 == 270:
     print("둘이 같다.")
+
+import math
+if math.sqrt(26) == int(math.sqrt(26)):
+    print("제곱근과 int값 둘이 같다")
+else:
+    print("다르다")
+    
