@@ -780,3 +780,15 @@ if math.sqrt(26) == int(math.sqrt(26)):
     print("제곱근과 int값 둘이 같다")
 else:
     print("다르다")
+
+# reference
+a = [1,2,3,4,5]
+b = [[2,3],[4,5]]
+b[1] = a
+a.pop()
+a.pop()
+a = [2,3,4,5]
+print(b)
+b.append(a)
+a[1] = 100
+print(b)
