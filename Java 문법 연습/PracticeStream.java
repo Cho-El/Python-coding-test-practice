@@ -122,6 +122,15 @@ public class PracticeStream {
         // immutableMap.put("score", "40"); Map.of로 생성한 인스턴스는 수정할 수 없다.
         
         // 데이터 순회
-        
+        for (Map.Entry<Integer,String> entry : immutableMap2.entrySet()) {
+            System.out.println("key : " + entry.getKey() + " value : " + entry.getValue());
+        }
+        for (Integer key : immutableMap2.keySet()) {
+            System.out.println("key : " + key + " value : " + immutableMap2.get(key));
+        }
+        immutableMap2.entrySet().forEach(
+            (entry) -> {
+                System.out.println("key : " + entry.getKey() + " value : " + entry.getValue());
+            });
     }
 }
