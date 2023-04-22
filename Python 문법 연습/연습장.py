@@ -792,3 +792,28 @@ print(b)
 b.append(a)
 a[1] = 100
 print(b)
+
+# counter
+from collections import Counter
+a = [1,2,3,2,1,2]
+b = Counter(a)
+print(b)
+
+s = 'abcde'
+s = deque(s)
+print(s)
+
+# len
+a = [1,2,3,4,5]
+b = []
+b.append(len(a))
+a.pop()
+a.pop()
+a = []
+print(b)
+
+# 대소문자
+if 'a' == 'A':
+    print(True)
+else:
+    print(False)
