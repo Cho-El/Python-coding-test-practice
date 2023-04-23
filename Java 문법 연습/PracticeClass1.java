@@ -1,4 +1,4 @@
-public class Main {
+public class PracticeClass1 {
     public static void main(String[] args){
         final ExternalClass externalClass = new ExternalClass(100,200);
         //  externalClass = new ExternalClass(); // final로 선언했으므로 재할당 불가능

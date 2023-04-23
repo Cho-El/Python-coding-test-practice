@@ -16,6 +16,7 @@ def solution(wall):
             temp.append(0)
         wallNearInfo.append(temp)
     
+    print(wallNearInfo)
     for x in range(len(wall)):
         for y in range(len(wall[x])):
             if 0<= x + 1 < len(wall):
