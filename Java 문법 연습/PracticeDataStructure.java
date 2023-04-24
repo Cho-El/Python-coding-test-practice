@@ -1,14 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-import javax.sound.sampled.SourceDataLine;
-
-public class PracticeStream {
+public class PracticeDataStructure {
     public static void main(String[] args) {
         // 자료형 연습 --------------------------------------
         // Array--------------------------------------------
@@ -23,7 +15,11 @@ public class PracticeStream {
         System.out.println("strArray3 : " + strArray3);
         System.out.println("strArray3 : " + Arrays.toString(strArray3));
         System.out.println("strArray3 length : " + strArray3.length);
-
+        // String 배열 순회
+        for (String str : strArray2) {
+            System.out.println("strArray2 element : " + str);
+        }
+        Arrays.stream(strArray2).forEach(System.out::println);
         // int 초기화
         int[] intArray1 = new int[5]; // 초기값 0
         int[] intArray2 = {1,2,3,4,5};
@@ -93,7 +89,7 @@ public class PracticeStream {
         arrayList4.stream().forEach((element) -> System.out.println("element : " + element));
         arrayList4.stream().forEach(System.out::println);
 
-        // HashMap--------------------------------------------
+        // HashMap-------------------------------------------- 순서 없음
         // 초기화 생성
         Map<String, Integer> hashMap1 = new HashMap<>();
         Map<String, Object> hashMap2 = new HashMap<>() {{
@@ -132,5 +128,26 @@ public class PracticeStream {
             (entry) -> {
                 System.out.println("key : " + entry.getKey() + " value : " + entry.getValue());
             });
+
+        // Stack ---------------------------------------------
+        // 선언
+        Stack<String> stringStack = new Stack<>();
+        Stack<Integer> intgerStack = new Stack<>();
+
+        stringStack.push("a");
+        stringStack.push("b");
+        stringStack.push("c");
+        stringStack.push("d");
+        stringStack.pop();
+        stringStack.empty();
+        System.out.println(stringStack.contains("a"));
+        System.out.println("stringStackElement : " + stringStack);
+        stringStack.stream().forEach(System.out::println);
+        System.out.println(stringStack.peek());
+        System.out.println("a index : " + stringStack.search("a"));
+        System.out.println("get 0 index : " + stringStack.get(0));
+        // Q -------------------------------------------------
+
+
     }
 }
