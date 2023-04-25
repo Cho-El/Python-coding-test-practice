@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class PracticeDataStructure {
     public static void main(String[] args) {
@@ -90,6 +91,7 @@ public class PracticeDataStructure {
         arrayList4.stream().forEach(System.out::println);
 
         // HashMap-------------------------------------------- 순서 없음
+        // TreeMap(Key 정렬)과 LinkedHashMap(입력 순서)이 존재
         // 초기화 생성
         Map<String, Integer> hashMap1 = new HashMap<>();
         Map<String, Object> hashMap2 = new HashMap<>() {{
@@ -140,14 +142,97 @@ public class PracticeDataStructure {
         stringStack.push("d");
         stringStack.pop();
         stringStack.empty();
-        System.out.println(stringStack.contains("a"));
+        System.out.println("stringStack : " + stringStack);
+        System.out.println("stringStack.contains(\"a\") : " + stringStack.contains("a"));
         System.out.println("stringStackElement : " + stringStack);
         stringStack.stream().forEach(System.out::println);
-        System.out.println(stringStack.peek());
+        System.out.println("stringStack.peek() : " + stringStack.peek());
         System.out.println("a index : " + stringStack.search("a"));
         System.out.println("get 0 index : " + stringStack.get(0));
+
         // Q -------------------------------------------------
+        Queue<String> stringQ = new LinkedList<String>(Arrays.asList("a","b","c"));
+        Queue<Integer> integerQ = new LinkedList<>();
+        integerQ.add(1);
+        integerQ.add(2);
+        integerQ.add(3);
+        System.out.println("q first value : " + integerQ.poll());
+        System.out.println("integerQ : " + integerQ);
+        System.out.println("integerQ have 2 : " + integerQ.contains(2));
+        System.out.println("integerQ.element : " + integerQ.element());
+        System.out.println("integerQ.peek : " + integerQ.peek());
 
+        // Deque 양방향 Q--------------------------------------
+        Deque<Integer> dequeInteger = new ArrayDeque<>();
+        dequeInteger.addFirst(1);
+        dequeInteger.offerFirst(2);
+        dequeInteger.addLast(3);
+        dequeInteger.add(4);
+        dequeInteger.offerLast(5);
+        System.out.println("dequeInteger : " + dequeInteger);
+        dequeInteger.removeFirst(); // 첫 번째 삭제
+        System.out.println("removeFirst dequeInteger : " + dequeInteger);
+        dequeInteger.poll(); // 첫 번째 삭제
+        System.out.println("poll dequeInteger : " + dequeInteger);
+        System.out.println("pollLast dequeInteger : " + dequeInteger.pollLast());
+        System.out.println("removeLast dequeInteger : " + dequeInteger.removeLast());
 
+        // 우선순위 Q-------------------------------------------
+        PriorityQueue<Integer> priorityQueueLowest = new PriorityQueue<>();
+        PriorityQueue<Integer> priorityQueueHighest = new PriorityQueue<>(Collections.reverseOrder());
+        priorityQueueLowest.add(1);
+        priorityQueueLowest.add(50);
+        priorityQueueLowest.add(10);
+        priorityQueueLowest.add(100);
+        priorityQueueHighest.add(1);
+        priorityQueueHighest.add(50);
+        priorityQueueHighest.add(10);
+        priorityQueueHighest.add(100);
+        System.out.println(priorityQueueLowest.peek());
+        System.out.println(priorityQueueLowest.poll());
+        System.out.println(priorityQueueHighest.peek());
+        System.out.println(priorityQueueHighest.poll());
+        System.out.println(priorityQueueLowest.isEmpty());
+
+        System.out.println("Integer.compare(1,2) : " + Integer.compare(1,2)); // -1
+        System.out.println("Integer.compare(2,1) : " + Integer.compare(2,1)); // 1
+        PriorityQueue<Integer[]> pq = new PriorityQueue<>((o1, o2) -> {
+            // 만일 2차원 배열의 첫 번째 원소가 같다면, 2번째 원소를 기준으로 내림차순 정렬한다.
+            if(o1[0].equals(o2[0])) {
+                return Integer.compare(o2[1], o1[1]);
+            }
+            // 2차원 배열의 첫 번째 원소를 기준으로 오름차순 정렬한다.
+            return Integer.compare(o1[0], o2[0]);
+        });
+        pq.offer(new Integer[] {5, 2});
+        pq.offer(new Integer[] {3, 3});
+        pq.offer(new Integer[] {1, 4});
+        pq.offer(new Integer[] {1, 5});
+        pq.offer(new Integer[] {7, 5});
+        while(!pq.isEmpty()) {
+            System.out.println(Arrays.toString(pq.poll()));
+        }
+
+        // 배열 슬라이싱 ----------------------------------------
+        // copyOfRange 메소드 활용
+        int[] srcArray = IntStream.rangeClosed(1,10).toArray();
+        int[] destArray = Arrays.copyOfRange(srcArray,3,7);
+        System.out.println("srcArray : " + Arrays.toString(srcArray));
+        System.out.println("destArray : " + Arrays.toString(destArray));
+        //Stream API 활용
+        int[] destArray2 = IntStream.range(3,7).map(num -> srcArray[num]).toArray();
+        System.out.println("destArray2 : " + Arrays.toString(destArray2));
+
+        // List 슬라이싱 ---------------------------------------
+        List<Integer> intArrayList = new ArrayList<>(Arrays.asList(10,0,1,2,3,4,5,6));
+        List<Integer> newList = new ArrayList<>(intArrayList.subList(2,5));
+        Collections.sort(intArrayList);
+        System.out.println("newList : " + newList);
+        System.out.println("intArrayList : " + intArrayList);
+        intArrayList.sort(Comparator.reverseOrder());
+        intArrayList.sort(Comparator.comparingInt(o -> o));
+        System.out.println("newList : " + newList);
+        System.out.println("intArrayList : " + intArrayList);
     }
+
 }
