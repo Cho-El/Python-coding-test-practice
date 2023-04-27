@@ -229,10 +229,29 @@ public class PracticeDataStructure {
         Collections.sort(intArrayList);
         System.out.println("newList : " + newList);
         System.out.println("intArrayList : " + intArrayList);
+        intArrayList = new ArrayList<>(intArrayList.subList(0,3));
         intArrayList.sort(Comparator.reverseOrder());
         intArrayList.sort(Comparator.comparingInt(o -> o));
         System.out.println("newList : " + newList);
         System.out.println("intArrayList : " + intArrayList);
+
+        // String 자르기
+        String str1 = "ABCDEF";
+        String str2 = "010-3478-3315";
+        String str3 = "바나나 : 1000원, 사과 : 2000원, 배 : 3000원";
+
+        String cutStr1 = str1.substring(str1.length()- 3);
+        System.out.println("cutStr1 : " + cutStr1);
+
+        String cutStr2 = String.join("", str2.split("-"));
+        System.out.println("cutStr2 : " + cutStr2);
+
+        String cutStr3 = str3.substring(str3.indexOf("사과"), str3.substring(str3.indexOf("사과")).indexOf("원") + str3.indexOf("사과"));
+        System.out.println("cutStr3 : " + cutStr3 + "원");
+
+        // 구조 분해 할당 ---------------------------------------
+        //
+
     }
 
 }
