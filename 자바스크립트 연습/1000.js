@@ -60,3 +60,21 @@ function solution() {
 }
 let value = solution()
 console.log(value)
+
+let dict = {}
+dict['a'] = 100
+console.log(dict)
+console.log(dict['a'])
+console.log(dict['b'])
+dict['a']++
+console.log(dict)
+
+str = 'abcdef'
+for (let i = 0; i < str.length; i++) {
+    if (!(str[i] in dict)){
+        dict[str[i]] = 1
+    } else{
+        dict[str[i]]++
+    }
+}
+console.log(dict)
