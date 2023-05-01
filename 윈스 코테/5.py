@@ -6,6 +6,7 @@ def solution(grids):
             for j in range(len(grid[0])):
                 if grid[i][j] == 'X':
                     black_boxes.append((i, j))
+
         if len(black_boxes) == 4:  # 검은색 상자가 4개면 ㅁ 모양 가능성이 있음
             # 4개의 상자가 직사각형 모양을 이루는지 확인
             xs = sorted([box[0] for box in black_boxes])
@@ -16,6 +17,7 @@ def solution(grids):
                 if all([grid[i][j] == '.' for i, j in white_boxes]):
                     result.append(True)
                     continue
+                
         result.append(False)
     return result
 
