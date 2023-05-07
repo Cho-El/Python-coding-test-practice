@@ -1,27 +1,28 @@
 def solution(e, starts):
-    result = []
-    divisor = [1 for _ in range(e+1)]
-    memo = 0
-    starts_dict = {}
-    sorted_starts = sorted(starts)
+    num = [0 for _ in range(e+1)]
 
-    for i in range(2, e+1):
-        for j in range(i, e+1, i):
-            divisor[j] += 1
-
-    for i in range(len(sorted_starts)):
-        if memo == 0:
-            max_index = divisor[sorted_starts[i]:].index(max(divisor[sorted_starts[i]:]))+sorted_starts[i]
-            starts_dict[sorted_starts[i]] = max_index
-            memo = max_index
-        else:
-            if sorted_starts[i] <= memo:
-                starts_dict[sorted_starts[i]] = memo
+    # end까지 개수 저장하기
+    for i in range(1, e+1):
+        for j in range(i, e+1):
+            idx = i * j
+            # j * k가 e보다 크다면 break
+            if idx > e:
+                break
+            # 숫자가 동일한 경우 1 증가
+            if i == j:
+                num[idx]
+            # 숫자가 다른 경우 2 증가
             else:
-                memo = divisor[sorted_starts[i]:].index(max(divisor[sorted_starts[i]:]))+sorted_starts[i]
-                starts_dict[sorted_starts[i]] = memo
-    
-    for s in starts:
-        result.append(starts_dict.get(s))
-        
-    return result
+                num[idx] = num[idx] + 2
+
+    result = [0] * (e+1)
+    max_value = 0
+
+    for i in range(e, 0, -1):
+        if num[i] >= max_value:
+            max_value = num[i]
+            result[i] = i
+        else:
+            result[i] = result[i + 1]
+
+    return [result[start] for start in starts]
