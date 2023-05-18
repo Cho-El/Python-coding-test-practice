@@ -231,7 +231,9 @@ public class PracticeDataStructure {
         System.out.println("intArrayList : " + intArrayList);
         intArrayList = new ArrayList<>(intArrayList.subList(0,3));
         intArrayList.sort(Comparator.reverseOrder());
+        System.out.println("reverseOrder intArrayList : " + intArrayList);
         intArrayList.sort(Comparator.comparingInt(o -> o));
+        intArrayList.sort(Integer::compare);
         System.out.println("newList : " + newList);
         System.out.println("intArrayList : " + intArrayList);
 

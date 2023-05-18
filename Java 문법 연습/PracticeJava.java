@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class PracticeJava {
     private static int globalClassVar = 0; // 전역 변수이자 클래스 변수
-    private int globalInstanceVar = 0;
+    private int globalInstanceVar = 0; // private한 전역변수
     public static void main(String[] args) {
         // Comparable과 Comparator
         // 정렬 -------
@@ -28,7 +28,7 @@ public class PracticeJava {
         }
         @Override
         public int compareTo(Student o) {
-            return Integer.compare(this.age, o.age);
+            return Integer.compare(this.age, o.age); // Integer.compare(x,y) x > y 이면 양수 x < y 이면 음수, 같으면 0을 반환
         }
     }
 
