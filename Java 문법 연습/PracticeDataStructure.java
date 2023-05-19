@@ -121,7 +121,7 @@ public class PracticeDataStructure {
         
         // 데이터 순회
         for (Map.Entry<Integer,String> entry : immutableMap2.entrySet()) {
-            System.out.println("key : " + entry.getKey() + " value : " + entry.getValue());
+                System.out.println("key : " + entry.getKey() + " value : " + entry.getValue());
         }
         for (Integer key : immutableMap2.keySet()) {
             System.out.println("key : " + key + " value : " + immutableMap2.get(key));
