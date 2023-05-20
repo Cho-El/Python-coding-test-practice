@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class StreamPractice {
@@ -8,6 +9,11 @@ public class StreamPractice {
         List<Integer> list1 = Arrays.asList(1,2,3,4,5);
         list1 = list1.stream().map(num -> num + 1).collect(Collectors.toList());
         list1.forEach(System.out::println);
+        List<String> fruit = Arrays.asList("ba","bo","da");
+        String joinFruit = fruit.stream().collect(Collectors.joining());
+        System.out.println(joinFruit);
 
+        // 
     }
+
 }
