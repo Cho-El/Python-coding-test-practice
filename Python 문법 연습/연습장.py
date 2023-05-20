@@ -819,3 +819,10 @@ else:
     print(False)
 
 # test
+
+print('a'<'abb')
+print(max('a','ab'))
+
+a = 'fejife'
+for idx, t in enumerate(a):
+    print(idx, t)
