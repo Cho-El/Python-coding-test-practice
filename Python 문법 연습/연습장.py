@@ -601,7 +601,7 @@ print(a)
 print(bisect_right(a,9))
 print(bisect_left(a,9))
 
-# 깊은 복사
+# 주소 값의 변경
 t = [10,11]
 a = [1,2]
 t = a
@@ -609,7 +609,7 @@ a = [3,4]
 print(t)
 print(a)
 
-# 얕은 복사
+# 주소 값이 같아서 같이 바뀜
 t = [10,11]
 a = [1,2]
 t = a
@@ -670,6 +670,7 @@ def a(x,y,z):
 a(10,20,30)
 
 # 깊은 복사
+from copy import deepcopy
 a = [1,2,3,4,5]
 b = deepcopy(a)
 c = a[:]
@@ -686,6 +687,23 @@ temp = a[:]
 temp[1][1] = 10
 print(a)
 print(temp)
+temp = []
+for i in a:
+    temp.append(i)
+temp[0][0] = 500
+print(a)
+print(temp)
+for i in a:
+    i[0] = 20
+print(a)
+print(temp)
+# 이차원 배열 깊은 복사
+temp = []
+for i in a:
+    temp.append(i[:])
+print(temp, a)
+a[0][0] = 250
+print(temp, a)
 
 # 단일 값 복사는 깊은복사
 a = [1,2,3,4]
@@ -818,11 +836,16 @@ if 'a' == 'A':
 else:
     print(False)
 
-# test
-
-print('a'<'abb')
-print(max('a','ab'))
-
+# 문자열 enumerate
 a = 'fejife'
 for idx, t in enumerate(a):
     print(idx, t)
+
+# 얕은 복사 깊은 복사
+first = [[1,2,3,4],[2,3,4,5],[6,7,8,9]]
+second1 = first[0] # 얕은 복사
+second2 = first[0][:] # 깊은 복사
+print(first, second1, second2)
+second1[0] = 100
+second2[0] = 200
+print(first, second1, second2)

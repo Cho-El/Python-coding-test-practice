@@ -12,7 +12,6 @@ public class PracticeJava {
         for (Student s : studentArray) {
             System.out.println("age : " + s.age);
         }
-        studentArray.
         Arrays.sort(studentArray);
         for (Student s : studentArray) {
             System.out.println("age : " + s.age);
