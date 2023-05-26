@@ -170,7 +170,6 @@ def dijkstra(start,end):
     while prev_node[end]:
         end = prev_node[end]
         path.append(str(end))
-    
     return '\n'.join((str(temp), str(len(path)), ' '.join(reversed(path))))
     
 print(dijkstra(start,end))
