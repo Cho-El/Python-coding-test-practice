@@ -849,3 +849,7 @@ print(first, second1, second2)
 second1[0] = 100
 second2[0] = 200
 print(first, second1, second2)
+
+# dict pop
+d = {1:21,2:31,3:42,4:5}
+print(d)

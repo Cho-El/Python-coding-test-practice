@@ -20,6 +20,7 @@
 
 # print(max(max_score[n - 1]), min(min_score[n - 1]), end = ' ')
 
+# dp
 # 두번째 풀이
 import sys
 from copy import deepcopy
