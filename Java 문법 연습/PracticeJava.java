@@ -16,6 +16,11 @@ public class PracticeJava {
         for (Student s : studentArray) {
             System.out.println("age : " + s.age);
         }
+
+        var sql = String.format("""
+                `%s` is SQL query
+                """, "sql");
+        System.out.println(sql);
     }
 
     public static class Student implements Comparable<Student> {

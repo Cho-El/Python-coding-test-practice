@@ -1,7 +1,7 @@
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ThreaPractice {
+public class ThreadPractice {
     //Tread 사용하지 않는 코드
     public static void main2(String[] args) {
         // 작업 1 - 1.5초 소요
