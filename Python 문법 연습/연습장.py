@@ -853,3 +853,6 @@ print(first, second1, second2)
 # dict pop
 d = {1:21,2:31,3:42,4:5}
 print(d)
+
+# 비트 마스킹
+print(bin(1<<3 * 2)) # 1000000

@@ -128,5 +128,5 @@ for a in array:
         dList.findNodeAndMovingHead(a)
     else:
         dList.findNodeAndMovingTail(abs(a))
-
+        
 print(dList.returnAllNode())
