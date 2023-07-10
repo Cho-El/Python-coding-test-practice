@@ -856,3 +856,14 @@ print(d)
 
 # 비트 마스킹
 print(bin(1<<3 * 2)) # 1000000
+
+a = "123455"
+b = set(a)
+print(b)
+b.add("1")
+print(b)
+
+a = "abcdef"
+b = "abc"
+if b in a:
+    print(True)

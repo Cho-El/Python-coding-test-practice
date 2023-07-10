@@ -7,13 +7,13 @@ def make_list(lst, row, col) :
 def flip(lst, flip_chk, row, col) :
     result = list()
 
-    for i in range(row) :
-        if flip_chk & (1 << i) :
-            result.append((1 << col) - lst[i] - 1)
+    for i in range(row) : # 행
+        if flip_chk & (1 << i) : # i번째 row를 뒤집어야 하는지 판단
+            result.append((1 << col) - lst[i] - 1) # 
         else :
             result.append(lst[i])
-    for i in range(col) :
-        if flip_chk & (1 << (row + i)) :
+    for i in range(col) : # 열
+        if flip_chk & (1 << (row + i)) : # i 번째 칼럼을 뒤집어야 하는지 판단
             for j in range(row) :
                 result[j] ^= (1 << i)
     return result
@@ -26,8 +26,7 @@ def solution(beginning, target):
         
     test_case = list(range(1 << (row + col)))
     test_case.sort(key = lambda x : bin(x).count('1'))
-    for i in test_case:
-        print(bin(i))
+    
     for i in test_case :
         fliped_list = flip(beginning_list, i, row, col)
         cnt = bin(i).count('1')
