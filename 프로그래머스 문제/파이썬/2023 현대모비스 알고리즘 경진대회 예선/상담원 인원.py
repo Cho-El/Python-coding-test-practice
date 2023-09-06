@@ -30,7 +30,10 @@ def solution(k, n, reqs):
             if maxDim < dif:
                 maxType = type
                 maxDim = dif
-                
+        
+        if maxDim == 0:
+            break
+              
         mento[maxType] += 1
         leftMentoNum -= 1
     
