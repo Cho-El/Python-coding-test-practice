@@ -867,3 +867,15 @@ a = "abcdef"
 b = "abc"
 if b in a:
     print(True)
+    
+a = "ab" * 2
+print(a)
+
+import heapq
+q = []
+heapq.heappush(q, [6,1,2])
+heapq.heappush(q, [5,3,2])
+heapq.heappush(q, [5,2,2])
+heapq.heappush(q, [1,3,2])
+while q:
+    print(heapq.heappop(q))
