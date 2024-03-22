@@ -879,3 +879,10 @@ heapq.heappush(q, [5,2,2])
 heapq.heappush(q, [1,3,2])
 while q:
     print(heapq.heappop(q))
+
+
+a = [1,2,3]
+b = ["a","b","c"]
+
+for i,j in enumerate(zip(a,b)):
+    print(i,j)
